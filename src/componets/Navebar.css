@@ -1,0 +1,9 @@
+.logo-img{
+    display: flex;
+    flex-direction: column;
+    
+}
+nav{
+    box-shadow: none;
+    
+}

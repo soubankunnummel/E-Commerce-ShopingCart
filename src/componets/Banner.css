@@ -1,0 +1,33 @@
+.ban-img{
+    width: 350px;
+    
+}
+.categorys{
+    
+    color: black;
+    
+}
+.categorys:hover{
+    text-decoration: underline;
+}
+.newLower-text{
+    color: black !important;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.shotnow-btn{
+    border: 1px solid black;
+    border-radius: 40px;
+    height: 40px;
+    width: 100px;
+    margin-left: 3rem;
+    color: black;
+}
+.shotnow-btn:hover{
+    border: 2px solid black;
+}
+.carsl-img{
+    width: 100px;
+    height: 50px;
+}

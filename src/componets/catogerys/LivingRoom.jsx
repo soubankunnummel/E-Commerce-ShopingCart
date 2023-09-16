@@ -18,14 +18,14 @@ export default function LivingRoom() {
   const handleViewProduct = (productId) => {
     navigat(`/View/${productId}`);
   };
-  const { Livinroom, serchTerm } = useContext(Productcontext);
+  const { LivingRooms, serchTerm } = useContext(Productcontext);
   return (
     <div className="container mx-5">
       <h1 className="mt-5" style={{ textAlign: "center" }}>
         Livingroom
       </h1>
       <MDBRow className="mt-5" id="allproducts">
-        {Livinroom.filter((val) => {
+        {LivingRooms.filter((val) => {
           return serchTerm.toLowerCase() === " "
             ? val
             : val.name.toLowerCase().includes(serchTerm);

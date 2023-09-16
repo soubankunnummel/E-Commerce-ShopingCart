@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import {
   MDBBtn,
   MDBCard,
@@ -28,20 +28,24 @@ export default function Cart() {
     setCart(updatedCart);
   };
 
-  const [count, setCount] = useState(1);
-
-  const increaseCount = () => { 
-    setCount(count + 1);
+  const increaseCount = (id) => {
+    const updateCount = cart.map((item) => {
+      if (item.id === id) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    setCart(updateCount);
   };
 
-  const decreaseCount = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  };
-
-  const calculateTotal = () => {
-    return cart.reduce((total, item) => total + item.price * count, 0);
+  const decreaseCount = (id) => {
+    const updateCount = cart.map((item) => {
+      if (item.id === id && item.quantity > 1) {
+        return { ...item, quantity: item.quantity - 1 };
+      }
+      return item;
+    });
+    setCart(updateCount);
   };
 
   return (
@@ -86,31 +90,43 @@ export default function Cart() {
                             {item.name}
                           </MDBTypography>
                           <MDBTypography tag="h6" style={{ color: "#9e9e9e" }}>
-                            Color: {item.color}
+                            
                           </MDBTypography>
 
                           <div className="d-flex align-items-center">
                             <p className="fw-bold mb-0 me-5 pe-3">
-                              {item.price}$
+                              {item.price }$
                             </p>
+                            <div
+                              className="d-flex align-items-start bg-light mb-3"
+                              style={{ height: "100px" }}
+                            >
+                              <MDBCol>
 
-                            <div className="def-number-input number-input safari_only">
-                              <button
+                              <MDBBtn
                                 style={{ border: "1px" }}
                                 className="minus mx-2 "
                                 onClick={() => decreaseCount(item.id)}
                               >
-                                {" "}
-                                -
-                              </button>
-                              <span>{count} </span>
-                              <button
+                                <MDBIcon fas icon="minus" />
+                              </MDBBtn>
+                              <span>{item.quantity} </span>
+                              <MDBBtn
                                 className="plus"
                                 style={{ border: "1px" }}
                                 onClick={() => increaseCount(item.id)}
                               >
-                                +
-                              </button>
+                                <MDBIcon fas icon="plus" />
+                              </MDBBtn>
+
+
+                              </MDBCol>
+                              
+                            </div>
+
+                            <div className="def-number-input number-input safari_only">
+                              {/* <MDBBtn>Button</MDBBtn> */}
+                              
                             </div>
                           </div>
                           <MDBTypography tag="h5" className="fw-bold  mx-5">
@@ -121,7 +137,7 @@ export default function Cart() {
                             style={{ width: "100px" }}
                             className="fw-bold mx-5 "
                           >
-                            {item.price * count}$
+                            {item.price * item.quantity}
                           </MDBTypography>
                         </div>
                       </div>
@@ -154,7 +170,11 @@ export default function Cart() {
                           className="m-2"
                           onClick={handleBackToShopping}
                         >
-                          <MDBIcon className="pt-4" fas icon="angle-left me-2" />
+                          <MDBIcon
+                            className="pt-4"
+                            fas
+                            icon="angle-left me-2"
+                          />
                           Back to shopping
                         </a>
                       </MDBTypography>

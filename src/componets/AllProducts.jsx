@@ -22,7 +22,8 @@ export default function AllProducts() {
     navigate(`/View/${productId}`);
   };
 
-  const { Products, serchTerm } = useContext(Productcontext);
+  const { productss, serchTerm } = useContext(Productcontext);
+  
 
   return (
     <>
@@ -35,7 +36,7 @@ export default function AllProducts() {
           All products
         </h1>
         <MDBRow className="mt-5 my-5" id="allproducts">
-          {Products.filter((val) => {
+          {productss.filter((val) => {
             return serchTerm.toLowerCase() === " "
               ? val
               : val.name.toLowerCase().includes(serchTerm);
@@ -53,7 +54,7 @@ export default function AllProducts() {
                 <MDBCardBody>
                   <MDBCardTitle>{product.name} </MDBCardTitle>
                   <MDBCardText>{product.discription}</MDBCardText>
-                  <MDBCardTitle>₹{product.price} </MDBCardTitle>
+                  <MDBCardTitle>${product.price} </MDBCardTitle>
 
                   {/* Pass the product.id as a parameter to the handleViewProduct function */}
                   <MDBBtn onClick={() => handleViewProduct(product.id)}>

@@ -25,29 +25,7 @@ export default function Register() {
     console.log(login);
 
 
-    // const name = e.target.elements.form1.value;
-    // const email = e.target.elements.form2.value;
-    // const password = e.target.elements.form3.value;
-    // const repetpassword = e.target.elements.form4.value;
-
-    // input validation 
-    // if (!name || !email || !password || !repetpassword) {
-    //   alert("Please fill in all fields");
-    //   return; 
-    // }
-
-    // const emailValid = user.filter((item) => item.email === email);
-    // if (emailValid.length !== 0) {
-    //   alert("Email already exists");
-    //   return; // Do not proceed with registration
-    // }
-
-    // Validation passed, proceed with registration
-    // setUser(() => [...user, { name, email, password, repetpassword }]);
-    // e.target.reset();
-    // console.log(user);
-    
-    // Redirect to login page
+   
     navigate("/login");
   };
 

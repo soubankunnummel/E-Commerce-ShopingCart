@@ -25,7 +25,7 @@ export default function Login(props) {
     // const password = e.target.elements.pass.value;
     
     const getUser = login.find((user)=> (user.email === email && user.password === password))
-    console.log(getUser.username);
+    // console.log(getUser.username);
 
     if(getUser){
       setUerName( [...userName,...getUser.username])
@@ -35,17 +35,7 @@ export default function Login(props) {
       alert("invalid user")
     }
     
-    // if(getUser.lenght!==0){
-    //   if(getUser[0].password === password){
-    //     navigat('/')
-    //     setUerName(getUser[0].name)
-        
-    //   }else{
-    //     alert("invalid details") 
-    //   }
-    // }else{
-    //   alert("user not avilable")
-    // }
+    
   }
   console.log(userName);
   const navigat = useNavigate();

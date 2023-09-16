@@ -18,12 +18,12 @@ export default function Bedroom() {
   const handleViewProduct = (productId) => {
     navigat(`/View/${productId}`);
   };
-  const {BedroomProducts,serchTerm} =useContext(Productcontext)
+  const {BedroomProductss,serchTerm} =useContext(Productcontext)
   return (
     <div className="container mx-5">
       <h1 className="mt-5" style={{textAlign:'center'}}>Bedroom</h1>
       <MDBRow className="mt-5" id="allproducts">
-        {BedroomProducts.filter((val) => {
+        {BedroomProductss.filter((val) => {
           return serchTerm.toLowerCase() === " "
             ? val
             : val.name.toLowerCase().includes(serchTerm);

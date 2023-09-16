@@ -6,6 +6,7 @@ export const Products = [
     price: 599.99,
     image: "https://www.ikea.com/us/en/images/products/friheten-sleeper-sectional-3-seat-w-storage-skiftebo-dark-gray__0175610_pe328883_s5.jpg?f=xl",
     type: "Living Room Furniture",
+    quantity: 1,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const Products = [
     price: 349.99,
     image: "https://www.ikea.com/us/en/images/products/nordviken-nordviken-table-and-6-chairs-antique-stain-antique-stain__0941064_pe795320_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const Products = [
     price: 799.99,
     image: "https://www.ikea.com/us/en/images/products/slattum-upholstered-bed-frame-knisa-light-gray__0768244_pe754388_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const Products = [
     price: 149.99,
     image: "https://www.ikea.com/us/en/images/products/vittsjoe-coffee-table-black-brown-glass__0135348_pe292039_s5.jpg?f=s",
     type: "Living Room Furniture",
+    quantity: 1,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const Products = [
     price: 499.99,
     image: "https://www.ikea.com/us/en/images/products/pax-bergsbo-wardrobe-dark-gray-dark-gray__1154692_pe886251_s5.jpg?f=m",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const Products = [
     price: 249.99,
     image: "https://www.ikea.com/us/en/images/products/kallax-shelf-unit-white__0644757_pe702939_s5.jpg?f=s",
     type: "Living Room Furniture",
+    quantity: 1,
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const Products = [
     price: 329.99,
     image: "https://www.ikea.com/us/en/images/products/bjoerksnaes-5-drawer-chest-birch__0598056_pe677425_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const Products = [
     price: 89.99,
     image: "https://www.ikea.com/us/en/images/products/stig-bar-stool-with-backrest-black-black__0948110_pe798867_s5.jpg?f=s",
     type: "Kitchen Furniture",
+    quantity: 1,
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const Products = [
     price: 299.99,
     image: "https://www.ikea.com/us/en/images/products/gladhoejden-nilserik-desk-sit-stand-support-white-dark-blue__1155438_pe886634_s5.jpg?f=s",
     type: "Home Office Furniture",
+    quantity: 1,
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ export const Products = [
     price: 799.99,
     image: "https://www.ikea.com/us/en/images/products/askholmen-table-2-chairs-outdoor-light-brown-stained__0735576_pe740060_s5.jpg?f=s",
     type: "Outdoor Furniture",
+    quantity: 1,
   },
   {
     id: 11,
@@ -87,6 +97,7 @@ export const Products = [
     image:
       "https://www.ikea.com/us/en/images/products/finnala-corner-sleeper-sofa-5-seat-with-chaise-dalstorp-multicolor__0725562_pe734946_s5.jpg?f=s",
     type: "Living Room Furniture",
+    quantity: 1,
   },
   {
     id: 12,
@@ -97,6 +108,7 @@ export const Products = [
     image:
       "https://www.ikea.com/us/en/images/products/lack-tv-unit-black-brown__0955264_pe803706_s5.jpg?f=s",
     type: "Living Room Furniture",
+    quantity: 1,
   },
   {
     id: 13,
@@ -106,6 +118,7 @@ export const Products = [
     image:
       "https://www.ikea.com/us/en/images/products/vittsjoe-nesting-tables-set-of-2-black-brown-glass__0735687_pe740087_s5.jpg?f=s",
     type: "Living Room Furniture",
+    quantity: 1,
   },
   {
     id: 14,
@@ -115,6 +128,7 @@ export const Products = [
     image:
       "https://www.ikea.com/us/en/images/products/trindsnoe-floor-lamp-white-metal-birch-veneer__1164308_pe902206_s5.jpg?f=m",
     type: "Living Room Furniture",
+    quantity: 1,
   },
   {
     id: 15,
@@ -124,6 +138,7 @@ export const Products = [
     image:
       "https://www.ikea.com/us/en/images/products/strandmon-wing-chair-skiftebo-yellow__0325450_pe517970_s5.jpg?f=s",
     type: "Living Room Furniture",
+    quantity: 1,
   },
   {
     id: 16,
@@ -132,6 +147,7 @@ export const Products = [
     price: 699.99,
     image: "https://www.ikea.com/us/en/images/products/malm-bed-frame-high-black-brown-luroey__0638608_pe699032_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 17,
@@ -140,6 +156,7 @@ export const Products = [
     price: 99.99,
     image: "https://www.ikea.com/us/en/images/products/gladom-tray-table-red__0568691_pe665565_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 18,
@@ -148,6 +165,7 @@ export const Products = [
     price: 349.99,
     image: "https://www.ikea.com/us/en/images/products/hauga-storage-combination-gray__0914341_pe783950_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 19,
@@ -156,6 +174,7 @@ export const Products = [
     price: 599.99,
     image: "https://www.ikea.com/us/en/images/products/pax-hasvik-wardrobe-dark-gray-dark-gray__1119872_pe873635_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 20,
@@ -164,6 +183,7 @@ export const Products = [
     price: 249.99,
     image: "https://www.ikea.com/us/en/images/products/hemnes-8-drawer-dresser-white-stain__0627346_pe693299_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 21,
@@ -172,6 +192,7 @@ export const Products = [
     price: 79.99,
     image: "https://www.ikea.com/us/en/images/products/yttervag-nightstand-gray-brown__1250458_pe923747_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 22,
@@ -180,6 +201,7 @@ export const Products = [
     price: 899.99,
     image: "https://www.ikea.com/us/en/images/products/nordli-bed-with-headboard-and-storage-anthracite__1151020_pe884726_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 23,
@@ -188,6 +210,7 @@ export const Products = [
     price: 299.99,
     image: "https://www.ikea.com/us/en/images/products/idanaes-coffee-table-dark-brown-stained__1161066_pe889274_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 24,
@@ -196,6 +219,7 @@ export const Products = [
     price: 149.99,
     image: "https://www.ikea.com/us/en/images/products/tolkning-bench-with-storage-handmade-rattan__1098691_pe865484_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
   {
     id: 25,
@@ -204,8 +228,8 @@ export const Products = [
     price: 599.99,
     image: "https://www.ikea.com/us/en/images/products/neiden-bed-frame-pine__0749131_pe745500_s5.jpg?f=s",
     type: "Bedroom Furniture",
+    quantity: 1,
   },
-
   {
     id: 26,
     name: "Extendable Dining Table",
@@ -213,6 +237,7 @@ export const Products = [
     price: 499.99,
     image: "https://www.ikea.com/us/en/images/products/nordviken-drop-leaf-table-black__0714209_pe729967_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 27,
@@ -221,6 +246,7 @@ export const Products = [
     price: 199.99,
     image: "https://www.ikea.com/us/en/images/products/moerbylanga-tobias-table-and-4-chairs-oak-veneer-brown-stained-brown-red-chrome-plated__1143383_pe881484_s5.jpg?f=m",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 28,
@@ -229,6 +255,7 @@ export const Products = [
     price: 349.99,
     image: "https://www.ikea.com/us/en/images/products/malsjoe-sideboard-black-stained__0644409_pe702649_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 29,
@@ -237,6 +264,7 @@ export const Products = [
     price: 299.99,
     image: "https://www.ikea.com/us/en/images/products/fjaellbo-sideboard-black__1129167_pe891018_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 30,
@@ -245,6 +273,7 @@ export const Products = [
     price: 549.99,
     image: "https://www.ikea.com/us/en/images/products/ekedalen-ekedalen-table-with-2-chairs-and-bench-dark-brown-orrsta-light-gray__0737694_pe741214_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 31,
@@ -253,6 +282,7 @@ export const Products = [
     price: 599.99,
     image: "https://www.ikea.com/us/en/images/products/hemnes-glass-door-cabinet-with-3-drawers-white-stain-light-brown__0805255_pe769478_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 32,
@@ -261,6 +291,7 @@ export const Products = [
     price: 329.99,
     image: "https://www.ikea.com/us/en/images/products/mariedamm-table-black-marble-effect__0916869_pe785444_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 33,
@@ -269,6 +300,7 @@ export const Products = [
     price: 129.99,
     image: "https://www.ikea.com/us/en/images/products/haverud-dalfred-table-and-2-stools-black-black__1028674_pe835477_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 34,
@@ -277,6 +309,7 @@ export const Products = [
     price: 79.99,
     image: "https://www.ikea.com/us/en/images/products/skogsta-bench-acacia__0365463_pe548271_s5.jpg?f=m",
     type: "Dining Room Furniture",
+    quantity: 1,
   },
   {
     id: 35,
@@ -285,6 +318,6 @@ export const Products = [
     price: 49.99,
     image: "https://www.ikea.com/us/en/images/products/hutten-9-bottle-wine-rack-solid-wood__0711110_pe727966_s5.jpg?f=s",
     type: "Dining Room Furniture",
+    quantity: 1,
   }
-  
 ];

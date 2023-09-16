@@ -53,6 +53,35 @@
     width: 7rem;
     height: 40px;
     color: #000;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 14px;
+}
+.card-btn-storage{
+    z-index: 999;
+    position: relative;
+    bottom: 77px;
+    left: 34px;
+    border: none;
+    border-radius: 5rem;
+    width: 10rem;
+    height: 40px;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+.card-btn-Office{
+    z-index: 999;
+    position: relative;
+    bottom: 77px;
+    left: 36px;
+    border: none;
+    border-radius: 5rem;
+    width: 9rem;
+    height: 40px;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+
+
 }

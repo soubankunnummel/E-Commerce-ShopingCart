@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Productcontext } from "../Context";
 import {
@@ -14,30 +14,19 @@ import {
 
 export default function View() {
   const { id } = useParams();
-  const { Products, cart, setCart, itemCount,setItemCount } = useContext(Productcontext);
-  const [count, setCount] = useState(1);
+  const { productss, cart, setCart, userName } = useContext(Productcontext);
+
   const navigate = useNavigate();
 
-  
   // Filter the product that matches the 'id' parameter
-  const viewProduct = Products.filter((product) => product.id === parseInt(id));
+  const viewProduct = productss.filter(
+    (product) => product.id === parseInt(id)
+  );
 
   if (!viewProduct) {
     // Handle the product is not found
     return <h1 style={{ textAlign: "center" }}>Product not found</h1>;
   }
-
-  const increaseCount = () => {
-    setCount(count + 1);
-  };
-
-  const decreaseCount = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  };
-
-//   const total = viewProduct.price * count;
 
   const handleAddToCart = () => {
     // Check if the product is already in the cart
@@ -45,63 +34,57 @@ export default function View() {
       alert("Product is already added to the cart");
     } else {
       // Add the selected product to the cart
-      setCart(()=>[...cart, ...viewProduct]);
+      setCart(() => [...cart, ...viewProduct]);
       console.log(cart);
-      alert("Product successfully added to the cart");
     }
-    navigate("/Cart")
-    
-    
+
+    if (userName == "") {
+      alert("Please login");
+      navigate("/Login");
+    } else {
+      // User is logged in, allow them to add to cart
+      alert("Product successfully added to the cart");
+      navigate("/Cart");
+    }
   };
 
   const handleBuyNow = () => {
-    navigate('/Cart');
+    navigate("/Cart");
   };
 
   return (
     <div className="container mt-5">
-           {viewProduct.map((item) => (
-            
-      <MDBRow key={item.id}>
-        <MDBCol md="6">
+      {viewProduct.map((item) => (
+        <MDBRow key={item.id}>
+          <MDBCol md="6">
             <MDBCard>
-            <MDBCardImage src={item.image} alt={viewProduct.name} />
-          </MDBCard>
-        </MDBCol>
-        <MDBCol md="6">
-          <MDBCard>
-            <MDBCardBody>
-              <MDBCardTitle>{item.name}</MDBCardTitle>
-              <MDBCardText>{item.description}</MDBCardText>
-              <MDBCardText>
-                <strong>Price:</strong> ₹{item.price}
-              </MDBCardText>
-              <div className="d-flex align-items-center">
-                <MDBBtn color="primary" className="me-2" onClick={decreaseCount}>
-                  -
-                </MDBBtn>
-                <span className="me-2">{count}</span>
-                <MDBBtn color="primary" onClick={increaseCount}>
-                  +
-                </MDBBtn>
-              </div>
-              <p className="mt-3">
-                <strong>Total:</strong> ₹{item.price*count}
-              </p>
+              <MDBCardImage src={item.image} alt={viewProduct.name} />
+            </MDBCard>
+          </MDBCol>
+          <MDBCol md="6">
+            <MDBCard>
+              <MDBCardBody>
+                <MDBCardTitle>{item.name}</MDBCardTitle>
+                <MDBCardText>{item.description}</MDBCardText>
+                <MDBCardText>
+                  <strong>Price:</strong> ₹{item.price}
+                </MDBCardText>
 
-              <MDBBtn className="mx-2" color="primary" onClick={handleAddToCart}>
-                Add to Cart
-              </MDBBtn>
-              <MDBBtn color="success" onClick={handleBuyNow}>
-                Buy Now
-              </MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-
-          
-        </MDBCol>
-      </MDBRow>
-           ))}
+                <MDBBtn
+                  className="mx-2"
+                  color="primary"
+                  onClick={handleAddToCart}
+                >
+                  Add to Cart
+                </MDBBtn>
+                <MDBBtn color="success" onClick={handleBuyNow}>
+                  Buy Now
+                </MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+        </MDBRow>
+      ))}
     </div>
   );
 }

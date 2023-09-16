@@ -16,9 +16,9 @@ import View from "./pages/View";
 import Bedroom from "./componets/catogerys/Bedroom";
 import DiningRoom from "./componets/catogerys/DiningRoom";
 import LivingRoom from "./componets/catogerys/LivingRoom";
-import Pymetn from "./pages/Pyment";
+
 import Pyment from "./pages/Pyment";
-import Serch from "./componets/Serch";
+
 import AllProducts from "./componets/AllProducts";
 import { userList } from "./user/UserList";
 
@@ -27,7 +27,12 @@ function App() {
     console.log(item);
   };
   const [itemCount, setItemCount] = useState([]);
-  const [user, setUser] = useState([]);
+  const [productss,setProductss] = useState(Products)
+  const [BedroomProductss,setBedroomProductss] = useState(BedroomProducts)
+  const [DinigRooms,setDinigRoom] = useState(DinigRoom)
+  const [LivingRooms,setLivingRooms] = useState(Livinroom)
+
+  const [user, setUser] = useState([]); 
   const [cart, setCart] = useState([]);
   const [userName, setUerName] = useState([]);
   const [serchTerm, setSerchTerm] = useState("");
@@ -40,10 +45,11 @@ function App() {
           serchTerm,
           setSerchTerm,
           setCart,
-          Livinroom,
-          DinigRoom,
-          BedroomProducts,
-          Products,
+          LivingRooms,
+          DinigRooms,
+          BedroomProductss,
+          productss,setProductss,
+          
           cart,
           setCart,
           user,
@@ -54,7 +60,7 @@ function App() {
           setItemCount,
         }}
       >
-        <Navebar size={cart.length} userName={userName} />
+        <Navebar size={cart.length}  />
         <Routes>
           if (BedroomProducts) {<Route path="/Bedroom" element={<Bedroom />} />}
           if (DinigRoom) {<Route path="/DinigRoom" element={<DiningRoom />} />}

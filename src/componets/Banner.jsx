@@ -118,36 +118,36 @@ export default function Banner() {
         <Carousel responsive={responsive} className="d-flex ">
           <div className="card-carosel justify-content-around">
             <img
-              src="https://www.ikea.com/images/decoration-7af1f0326cc2160db2b8f53d369119a5.jpg?f=xs"
+              src="https://www.ikea.com/images/storage-containers-7914dd2f2a10f52920d85a70c66e47f9.jpg?f=xs"
               className="crosel-img1 "
               alt="image"
             />
             <div>
-              <button className="card-btn">Dicortaion</button>
+              <button className="card-btn-storage">Storage containers</button>
             </div>
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
             {" "}
             {/* Added marginLeft */}
             <img
-              src="https://www.ikea.com/images/food-storage-b76081f2b5d03e574c5c27ff7895f5ba.jpg?f=xs"
+              src="https://www.ikea.com/images/office-accessories-b0adcb553d941b6db4fe076cb539f0c4.jpg?f=xs"
               className="crosel-img "
               alt="image"
             />
             <div>
-              <button className="card-btn">Dicortaion</button>
+              <button className="card-btn-Office">Office accessories</button>
             </div>
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
             {" "}
             {/* Added marginLeft */}
             <img
-              src="https://www.ikea.com/images/table-accessories-c4f7f91d10eeceacb31f507899f2f90c.jpg?f=xs"
+              src="https://www.ikea.com/images/bed-textiles-a13e46258a722094b07af8d044fdcd7a.jpg?f=xs"
               className="crosel-img "
               alt="image"
             />
             <div>
-              <button className="card-btn">Dicortaion</button>
+              <button className="card-btn">Bed textails</button>
             </div>
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
@@ -159,35 +159,32 @@ export default function Banner() {
               alt="image"
             />
             <div>
-              <button className="card-btn">Dicortaion</button>
+              <button className="card-btn">Food storage</button>
             </div>
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
             {" "}
             {/* Added marginLeft */}
             <img
-              src="https://www.ikea.com/images/table-accessories-c4f7f91d10eeceacb31f507899f2f90c.jpg?f=xs"
+              src="https://www.ikea.com/images/food-storage-b76081f2b5d03e574c5c27ff7895f5ba.jpg?f=xs"
               className="crosel-img "
               alt="image"
             />
             <div>
-              <button className="card-btn">Dicortaion</button>
+              <button className="card-btn">Dinnerware</button>
             </div>
           </div>
-          <div className="card-carosel justify-content-around">
-            <img
-              src="https://www.ikea.com/images/decoration-7af1f0326cc2160db2b8f53d369119a5.jpg?f=xs"
-              className="crosel-img1 "
-              alt="image"
-            />
-            <div>
-              <button className="card-btn">Dicortaion</button>
-            </div>
-          </div>
+          
         </Carousel>
       </div>
-      <div className="mt-5">
+      <div className="container mt-5">
+
         <h1>under the carosel</h1>
+        <div className="row">
+          <div className="colash-img">
+            
+          </div>
+        </div>
       </div>
       <AllProducts/>
     </>

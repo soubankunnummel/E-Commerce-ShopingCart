@@ -11,15 +11,24 @@ import { Link, useNavigate } from "react-router-dom";
 import { Productcontext } from "../Context";
 
 export default function Register() {
-  const { user, setUser } = useContext(Productcontext);
-  const navigate = useNavigate();
+  const { login,setLogin} = useContext(Productcontext);
+  const navigate = useNavigate(); 
+  const [name,setName] = useState('')
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
 
   const register = (e) => {
+  
     e.preventDefault();
-    const name = e.target.elements.form1.value;
-    const email = e.target.elements.form2.value;
-    const password = e.target.elements.form3.value;
-    const repetpassword = e.target.elements.form4.value;
+    setLogin((use) => (use = [...login,{name:name, email:email , password:password}]))
+    alert("user Registration succesfully completed..... Plese login page")
+    console.log(login);
+
+
+    // const name = e.target.elements.form1.value;
+    // const email = e.target.elements.form2.value;
+    // const password = e.target.elements.form3.value;
+    // const repetpassword = e.target.elements.form4.value;
 
     // input validation 
     // if (!name || !email || !password || !repetpassword) {
@@ -27,16 +36,16 @@ export default function Register() {
     //   return; 
     // }
 
-    const emailValid = user.filter((item) => item.email === email);
-    if (emailValid.length !== 0) {
-      alert("Email already exists");
-      return; // Do not proceed with registration
-    }
+    // const emailValid = user.filter((item) => item.email === email);
+    // if (emailValid.length !== 0) {
+    //   alert("Email already exists");
+    //   return; // Do not proceed with registration
+    // }
 
     // Validation passed, proceed with registration
-    setUser(() => [...user, { name, email, password, repetpassword }]);
-    e.target.reset();
-    console.log(user);
+    // setUser(() => [...user, { name, email, password, repetpassword }]);
+    // e.target.reset();
+    // console.log(user);
     
     // Redirect to login page
     navigate("/login");
@@ -66,6 +75,7 @@ export default function Register() {
               id="form1"
               type="text"
               required
+              onChange={(e) => {setName(e.target.value)}}
             />
             <MDBInput
               wrapperClass="mb-4"
@@ -74,6 +84,7 @@ export default function Register() {
               id="form2"
               type="email" 
               required
+              onChange={(e) => {setEmail(e.target.value)}}
             />
             <MDBInput
               wrapperClass="mb-4"
@@ -82,7 +93,8 @@ export default function Register() {
               id="form3"
               type="password"
               required
-            />
+              onChange={(e) => {setPassword(e.target.value)}}
+              />
             <MDBInput
               wrapperClass="mb-4"
               label="Repeat your password"
@@ -90,6 +102,8 @@ export default function Register() {
               id="form4"
               type="password"
               required
+              onChange={(e) => {setPassword(e.target.value)}}
+
             />
             <div className="d-flex flex-row justify-content-center mb-4">
               <MDBCheckbox

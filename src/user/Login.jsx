@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   MDBBtn,
   MDBContainer,
@@ -14,26 +14,38 @@ import { Link, useNavigate } from "react-router-dom";
 import { Productcontext } from "../Context";
  
 export default function Login(props) {
-  const { user, setUerName, userName } = useContext(Productcontext);
+  const { login, userName,setUerName } = useContext(Productcontext);
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
 
   const handlLogin = (e) => {
     e.preventDefault();
-    const email = e.target.elements.emil.value;
-    const password = e.target.elements.pass.value;
+
+    // const email = e.target.elements.emil.value;
+    // const password = e.target.elements.pass.value;
     
-    const getUser = user.filter((user)=> (user.email === email))
-    console.log(getUser);
-    if(getUser.lenght!==0){
-      if(getUser[0].password===password){
-        navigat('/')
-        setUerName(getUser[0].name)
-        
-      }else{
-        alert("invalid details")
-      }
+    const getUser = login.find((user)=> (user.email === email && user.password === password))
+    console.log(getUser.username);
+
+    if(getUser){
+      setUerName( [...userName,...getUser.username])
+      navigat('/')
+      
     }else{
-      alert("user not avilable")
+      alert("invalid user")
     }
+    
+    // if(getUser.lenght!==0){
+    //   if(getUser[0].password === password){
+    //     navigat('/')
+    //     setUerName(getUser[0].name)
+        
+    //   }else{
+    //     alert("invalid details") 
+    //   }
+    // }else{
+    //   alert("user not avilable")
+    // }
   }
   console.log(userName);
   const navigat = useNavigate();
@@ -63,16 +75,20 @@ export default function Login(props) {
                     id="emil"
                     type="email"
                     size="lg"
-                  />
+                    required
+                    onChange={(e) => {setEmail(e.target.value)}}
+                    />
                   <MDBInput
                  
-                    
-                    wrapperClass="mb-4 w-100"
-                    label="Password"
-                    id="pass"
-                    type="password"
-                    size="lg"
-                  />
+                 
+                 wrapperClass="mb-4 w-100"
+                 label="Password"
+                 id="pass"
+                 type="password"
+                 size="lg"
+                 required
+                 onChange={(e) => {setPassword(e.target.value)}}
+                 />
                   <MDBCheckbox
                     name="flexCheck"
                     id="flexCheckDefault"

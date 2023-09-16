@@ -30,7 +30,7 @@ export default function Cart() {
 
   const [count, setCount] = useState(1);
 
-  const increaseCount = () => {
+  const increaseCount = () => { 
     setCount(count + 1);
   };
 

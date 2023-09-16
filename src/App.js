@@ -5,7 +5,7 @@ import Navebar from "./componets/Navebar";
 import { Products } from "./componets/Products";
 import { BedroomProducts } from "./componets/catogerys/BedroomProdu";
 import { DinigRoom } from "./componets/catogerys/Dinigroom";
-import {Livinroom} from './componets/catogerys/LiviroomProduct'
+import { Livinroom } from "./componets/catogerys/LiviroomProduct";
 import Home from "./pages/Home";
 import Login from "./user/Login";
 import Register from "./user/Register";
@@ -19,6 +19,8 @@ import LivingRoom from "./componets/catogerys/LivingRoom";
 import Pymetn from "./pages/Pyment";
 import Pyment from "./pages/Pyment";
 import Serch from "./componets/Serch";
+import AllProducts from "./componets/AllProducts";
+import { userList } from "./user/UserList";
 
 function App() {
   const handlClick = (item) => {
@@ -28,20 +30,22 @@ function App() {
   const [user, setUser] = useState([]);
   const [cart, setCart] = useState([]);
   const [userName, setUerName] = useState([]);
-  const [serchTerm,setSerchTerm] = useState('')
+  const [serchTerm, setSerchTerm] = useState("");
+  const [login,setLogin] = useState(userList)
   return (
     <div className="App">
       <Productcontext.Provider
         value={{
+          login,setLogin,
           serchTerm,
           setSerchTerm,
           setCart,
-         Livinroom,
+          Livinroom,
           DinigRoom,
           BedroomProducts,
           Products,
           cart,
-          setCart, 
+          setCart,
           user,
           setUser,
           userName,
@@ -50,27 +54,16 @@ function App() {
           setItemCount,
         }}
       >
-        
         <Navebar size={cart.length} userName={userName} />
         <Routes>
-          if (BedroomProducts) {
-            <Route path="/Bedroom" element={<Bedroom/>}/>
-          }
-          if (DinigRoom) {
-            <Route path="/DinigRoom" element={<DiningRoom/>}/>
-          }
-          if (LivingRoom) {
-          <Route path="/LivingRoom" element={<LivingRoom/>}/>
-
-            
-          }
-         
+          if (BedroomProducts) {<Route path="/Bedroom" element={<Bedroom />} />}
+          if (DinigRoom) {<Route path="/DinigRoom" element={<DiningRoom />} />}
+          if (LivingRoom){" "}
+          {<Route path="/LivingRoom" element={<LivingRoom />} />}
           <Route path="/" element={<Home handlClick={handlClick} />} />
-
           <Route path="/Login" element={<Login />} />
-
+          <Route path="/All" element={<AllProducts />} />
           <Route path="/Register" element={<Register />} />
-
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Pyment" element={<Pyment />} />
           <Route path="/View/:id" element={<View />} />

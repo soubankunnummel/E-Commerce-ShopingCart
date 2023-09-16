@@ -13,27 +13,25 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBCollapse,
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardImage,
-  MDBBtn,
-  MDBRow,
-  MDBCol,
+  
 } from "mdb-react-ui-kit";
-import { Products } from "./Products";
+// import { Products } from "./Products";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navebar.css";
 import { Productcontext } from "../Context";
 
-export default function App({ size, userName }) {
-  const naviget = useNavigate();
+export default function App({ size }) {
   // const [serchTerm, setSerchTerm] = useState("");
   const [showBasic, setShowBasic] = useState(false);
   const navigat = useNavigate();
-  const { setSerchTerm } = useContext(Productcontext);
-
+  const {  userName, setUerName, setSerchTerm } =
+    useContext(Productcontext);
+  // const userName = login.filter((user) => user.id === login.id);
+  console.log(userName);
+  const hanleLogine = () => {
+    setUerName(()=> []);
+    navigat("/Login");
+  };
   return (
     <>
       <MDBNavbar
@@ -135,15 +133,24 @@ export default function App({ size, userName }) {
                 <MDBDropdownItem link onClick={() => navigat("/")}>
                   Settings
                 </MDBDropdownItem>
-                <MDBDropdownItem link onClick={() => navigat("/login")}>
-                  {userName ? " Sign Out" : "Login"}
+                <MDBDropdownItem link onClick={hanleLogine}>
+                  {userName == "" ? "Sign In " : "sign Out"}
                 </MDBDropdownItem>
               </MDBDropdownMenu>
             </MDBDropdown>
-            <Link to={"/Cart"}>
-              <MDBIcon fcas icon="cart-plus" color="black" className="mx-1" />
-            </Link>
-            <span>{size} </span>
+            {userName == "" ? null : (
+              <>
+                <Link to={"/Cart"}>
+                  <MDBIcon
+                    fcas
+                    icon="cart-plus"
+                    color="black"
+                    className="mx-1"
+                  />
+                </Link>
+                <span>{size} </span>
+              </>
+            )}
           </MDBCollapse>
         </MDBContainer>
       </MDBNavbar>

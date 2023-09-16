@@ -1,8 +1,36 @@
 import { MDBCarousel, MDBCarouselItem, MDBCol } from "mdb-react-ui-kit";
 import React from "react";
 import "./Banner.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { useNavigate } from "react-router-dom";
+import Home from "../pages/Home";
+import AllProducts from "./AllProducts";
 
 export default function Banner() {
+  const navigator = useNavigate();
+  const handlShopnow = () => {
+    navigator('/All')
+  }
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <>
       <div className=" container mx-5  ">
@@ -11,18 +39,18 @@ export default function Banner() {
             className="d-flex align-items-start bg-light ms-5 "
             style={{ height: "10px" }}
           >
-            
+            <div></div>
             <MDBCol>
               {" "}
-              <span className="categorys">Living Room</span>
+              <span className="categorys"onClick={()=> navigator('/LivingRoom')}>Living Room</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys">Dining Room</span>
+              <span className="categorys" onClick={()=> navigator('/DinigRoom')}>Dining Room</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys">Bedroom Furniture</span>
+              <span className="categorys" onClick={()=> navigator('/Bedroom')}>Bedroom Furniture</span>
             </MDBCol>
             <MDBCol>
               {" "}
@@ -45,8 +73,8 @@ export default function Banner() {
           <div className="images mt-5   ">
             <div className="d-flex   mb-3 ms-5" style={{ height: "650px" }}>
               <MDBCol className="pe-2">
-                <img 
-                className="ban-img"
+                <img
+                  className="ban-img"
                   src="https://www.ikea.com/images/new-lower-price-page-bf74a1c152fa73885a2cf0755d7ea604.jpg?f=s"
                   alt=""
                 />
@@ -64,14 +92,14 @@ export default function Banner() {
 
               <MDBCol className="pe-2">
                 <img
-                 className="ban-img"
+                  className="ban-img"
                   src="https://www.ikea.com/ext/ingkadam/m/508e2534bd9d2db9/original/PH170507-crop003.jpg?f=s"
                   alt=""
                 />
               </MDBCol>
               <MDBCol>
                 <img
-                 className="ban-img"
+                  className="ban-img"
                   src="https://www.ikea.com/ext/ingkadam/m/dcd97bad1ffff0b/original/PH163540-crop002.jpg?f=s"
                   alt=""
                 />
@@ -80,38 +108,88 @@ export default function Banner() {
           </div>
 
           <div className="butn">
-            <button className="shotnow-btn">shop now</button>
+            <button className="shotnow-btn" onClick={handlShopnow}>
+              shop now
+            </button>
           </div>
         </div>
       </div>
-      {/* <div className="carosel container">
-        <div className="row">
-          <h1>heare carosel</h1>
-          <MDBCarousel showControls>
-            <MDBCarouselItem
-              className="w-100 d-block"
-              itemId={1}
-              src="https://mdbootstrap.com/img/new/slides/042.jpg"
-              alt="..."
+      <div className="container mt-5 w-75">
+        <Carousel responsive={responsive} className="d-flex ">
+          <div className="card-carosel justify-content-around">
+            <img
+              src="https://www.ikea.com/images/decoration-7af1f0326cc2160db2b8f53d369119a5.jpg?f=xs"
+              className="crosel-img1 "
+              alt="image"
             />
-            
-            <MDBCarouselItem
-              className="w-100 d-block"
-              itemId={2}
-              src="https://mdbootstrap.com/img/new/slides/042.jpg"
-              alt="..."
+            <div>
+              <button className="card-btn">Dicortaion</button>
+            </div>
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/food-storage-b76081f2b5d03e574c5c27ff7895f5ba.jpg?f=xs"
+              className="crosel-img "
+              alt="image"
             />
-            
-            <MDBCarouselItem
-              className="w-100 d-block"
-              itemId={3}
-              src="https://mdbootstrap.com/img/new/slides/043.jpg"
-              alt="..."
+            <div>
+              <button className="card-btn">Dicortaion</button>
+            </div>
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/table-accessories-c4f7f91d10eeceacb31f507899f2f90c.jpg?f=xs"
+              className="crosel-img "
+              alt="image"
             />
-            
-          </MDBCarousel>
-        </div>
-      </div> */}
+            <div>
+              <button className="card-btn">Dicortaion</button>
+            </div>
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/cooking-accessories-f357da8a5787d63386b8b6a990867154.jpg?f=xs"
+              className="crosel-img "
+              alt="image"
+            />
+            <div>
+              <button className="card-btn">Dicortaion</button>
+            </div>
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/table-accessories-c4f7f91d10eeceacb31f507899f2f90c.jpg?f=xs"
+              className="crosel-img "
+              alt="image"
+            />
+            <div>
+              <button className="card-btn">Dicortaion</button>
+            </div>
+          </div>
+          <div className="card-carosel justify-content-around">
+            <img
+              src="https://www.ikea.com/images/decoration-7af1f0326cc2160db2b8f53d369119a5.jpg?f=xs"
+              className="crosel-img1 "
+              alt="image"
+            />
+            <div>
+              <button className="card-btn">Dicortaion</button>
+            </div>
+          </div>
+        </Carousel>
+      </div>
+      <div className="mt-5">
+        <h1>under the carosel</h1>
+      </div>
+      <AllProducts/>
     </>
   );
 }

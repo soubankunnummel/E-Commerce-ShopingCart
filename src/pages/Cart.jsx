@@ -13,6 +13,7 @@ import {
 } from "mdb-react-ui-kit";
 import { Productcontext } from "../Context";
 import { useNavigate } from "react-router-dom";
+import Navebar from "../componets/Navebar";
 
 export default function Cart() {
   const { cart, setCart, itemCount } = useContext(Productcontext);
@@ -49,6 +50,8 @@ export default function Cart() {
   };
 
   return (
+    <>
+    <Navebar size={cart.length}  />
     <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
       <MDBContainer className="h-100 py-5">
         <MDBRow className="justify-content-center align-items-center h-100">
@@ -187,5 +190,6 @@ export default function Cart() {
         </MDBRow>
       </MDBContainer>
     </section>
+    </>
   );
 }

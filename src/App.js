@@ -21,6 +21,12 @@ import Pyment from "./pages/Pyment";
 
 import AllProducts from "./componets/AllProducts";
 import { userList } from "./user/UserList";
+import AdminLogin from "./componets/Admin/Admin-login";
+import { AdminDetails } from "./componets/Admin/AdminDetail";
+
+import ViewPoduct from "./componets/Admin/ViewProduct";
+import Editporaduct from "./componets/Admin/Editporaduct";
+import Addproduct from "./componets/Admin/Addproduct";
 
 function App() {
   const handlClick = (item) => {
@@ -31,6 +37,7 @@ function App() {
   const [BedroomProductss,setBedroomProductss] = useState(BedroomProducts)
   const [DinigRooms,setDinigRoom] = useState(DinigRoom)
   const [LivingRooms,setLivingRooms] = useState(Livinroom)
+  const [admin,setAdmin] = useState(AdminDetails)
 
   const [user, setUser] = useState([]); 
   const [cart, setCart] = useState([]);
@@ -41,6 +48,7 @@ function App() {
     <div className="App">
       <Productcontext.Provider
         value={{
+          admin,setAdmin,
           login,setLogin,
           serchTerm,
           setSerchTerm,
@@ -60,7 +68,7 @@ function App() {
           setItemCount,
         }}
       >
-        <Navebar size={cart.length}  />
+        
         <Routes>
           if (BedroomProducts) {<Route path="/Bedroom" element={<Bedroom />} />}
           if (DinigRoom) {<Route path="/DinigRoom" element={<DiningRoom />} />}
@@ -73,6 +81,11 @@ function App() {
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Pyment" element={<Pyment />} />
           <Route path="/View/:id" element={<View />} />
+          <Route path="/AdminLogin" element={<AdminLogin />} />
+          <Route path="/ViewProduct" element={<ViewPoduct/>}/>
+          <Route path="/EditProduct/:id" element={<Editporaduct/>}/>
+          <Route path="/Addproducts" element={<Addproduct/>}/>
+
         </Routes>
         <div className="footer">
           <Footer />

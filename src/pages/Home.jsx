@@ -13,6 +13,7 @@ import { Productcontext } from "../Context";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Banner from "../componets/Banner";
+import Navebar from "../componets/Navebar";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -22,10 +23,11 @@ export default function Home() {
     navigate(`/View/${productId}`);
   };
 
-  const { productss, serchTerm } = useContext(Productcontext);
+  const { productss, serchTerm ,cart} = useContext(Productcontext);
 
   return (
     <>
+     <Navebar size={cart.length}  />
     {!serchTerm ? ( 
       
       <Banner />

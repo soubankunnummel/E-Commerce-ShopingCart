@@ -21,11 +21,10 @@ export default function Login(props) {
   const handlLogin = (e) => {
     e.preventDefault();
 
-    // const email = e.target.elements.emil.value;
-    // const password = e.target.elements.pass.value;
+  
     
     const getUser = login.find((user)=> (user.email === email && user.password === password))
-    // console.log(getUser.username);
+    
 
     if(getUser){
       setUerName( [...userName,...getUser.username])
@@ -44,7 +43,8 @@ export default function Login(props) {
 
   return (
     <>
-      <MDBContainer fluid>
+    <div className="d-flex justify-content-center">
+      <MDBContainer >
         <MDBRow className="d-flex justify-content-center align-items-center h-100">
           <MDBCol col="12">
             <MDBCard
@@ -90,6 +90,10 @@ export default function Login(props) {
                     Login
                   </MDBBtn>
                 </form>
+                <div className=" d-flex justify-content-end">
+
+                <MDBBtn className="w-10 " onClick={()=> navigat('/AdminLogin')}>Admin Loging</MDBBtn>
+                </div>
                 Don't have an account{" "}
                 <Link
                   to={"/Register"}
@@ -120,6 +124,7 @@ export default function Login(props) {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      </div>
     </>
   );
 }

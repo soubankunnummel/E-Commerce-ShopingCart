@@ -20,7 +20,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Navebar.css";
 import { Productcontext } from "../Context";
 
-export default function App({ size }) {
+export default function Navebar({ size }) {
   // const [serchTerm, setSerchTerm] = useState("");
   const [showBasic, setShowBasic] = useState(false);
   const navigat = useNavigate();

@@ -11,6 +11,7 @@ import {
   MDBCol,
 } from "mdb-react-ui-kit";
 import { useNavigate } from 'react-router-dom';
+import Navebar from '../Navebar';
 
 export default function Bedroom() {
   const navigat = useNavigate()
@@ -18,8 +19,10 @@ export default function Bedroom() {
   const handleViewProduct = (productId) => {
     navigat(`/View/${productId}`);
   };
-  const {BedroomProductss,serchTerm} =useContext(Productcontext)
+  const {BedroomProductss,serchTerm,cart} =useContext(Productcontext)
   return (
+    <>
+    <Navebar size={cart.length}  />
     <div className="container mx-5">
       <h1 className="mt-5" style={{textAlign:'center'}}>Bedroom</h1>
       <MDBRow className="mt-5" id="allproducts">
@@ -50,5 +53,6 @@ export default function Bedroom() {
         ))} 
       </MDBRow>
     </div>
+    </>
   )
 }

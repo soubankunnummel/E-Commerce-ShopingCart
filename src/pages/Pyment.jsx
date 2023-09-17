@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MDBBtn, MDBCard, MDBCardBody, MDBContainer } from "mdb-react-ui-kit";
+import Navebar from "../componets/Navebar";
+import { Productcontext } from "../Context";
 
 export default function Payment() {
+  const {cart} = useContext(Productcontext)
   return (
+    <>
+    <Navebar size={cart.length}  />
     <MDBContainer className="">
       <MDBCard>
         <MDBCardBody>
@@ -32,5 +37,6 @@ export default function Payment() {
         </MDBCardBody>
       </MDBCard>
     </MDBContainer>
+    </>
   );
 }

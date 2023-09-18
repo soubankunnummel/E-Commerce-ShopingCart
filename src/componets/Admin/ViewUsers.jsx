@@ -16,7 +16,7 @@ export default function ViewUsers() {
       <MDBTableHead>
         <tr>
           <th scope='col'>Name</th>
-          <th scope='col'>Emil</th>
+          <th scope='col'>Email</th>
           <th scope='col'>Id</th>
           
           

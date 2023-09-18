@@ -28,21 +28,16 @@ export default function Home() {
   return (
     <>
      <Navebar size={cart.length}  />
-    {!serchTerm ? ( 
+    {/* {!serchTerm ? (  */}
       
       <Banner />
-    ):(
+    {/* // ):( */}
       <div className="container mx-5">
         <h1 className="mt-5 home-card" style={{ textAlign: "center" }}>
           All products
         </h1>
         <MDBRow className="mt-5 my-5" id="allproducts">
-          {productss.filter((val) => {
-            return serchTerm.toLowerCase() === " "
-              ? val
-              : val.name.toLowerCase().includes(serchTerm);
-            // return false; // Return false to exclude items that don't match the search term
-          }).map((product, index) => (
+          {productss.map((product, index) => (
             <MDBCol md="3" key={index} style={{ marginBottom: 10 }}>
               <MDBCard className=" hover-zoom  ">
                 <MDBCardImage
@@ -51,7 +46,7 @@ export default function Home() {
                   src={product.image}
                   position="top"
                   alt="..."
-                />
+                /> 
                 <MDBCardBody>
                   <MDBCardTitle>{product.name} </MDBCardTitle>
                   <MDBCardText>{product.discription}</MDBCardText>
@@ -68,8 +63,7 @@ export default function Home() {
         </MDBRow>
       </div>
 
-    )
-  }
+     {/* )} */}
       
     </>
   );

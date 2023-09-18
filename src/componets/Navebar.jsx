@@ -13,7 +13,6 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBCollapse,
-  
 } from "mdb-react-ui-kit";
 // import { Products } from "./Products";
 import { Link, useNavigate } from "react-router-dom";
@@ -24,12 +23,12 @@ export default function Navebar({ size }) {
   // const [serchTerm, setSerchTerm] = useState("");
   const [showBasic, setShowBasic] = useState(false);
   const navigat = useNavigate();
-  const {  userName, setUerName, setSerchTerm } =
+  const { userName, setUerName, serchTerm, setSerchTerm, productss } =
     useContext(Productcontext);
   // const userName = login.filter((user) => user.id === login.id);
   console.log(userName);
   const hanleLogine = () => {
-    setUerName(()=> []);
+    setUerName(() => []);
     navigat("/Login");
   };
   return (
@@ -70,7 +69,7 @@ export default function Navebar({ size }) {
           </MDBNavbarToggler>
 
           <MDBCollapse navbar show={showBasic}>
-            <MDBNavbarNav className="mr-auto mx-5  mb-lg-0  nav-main">
+            <MDBNavbarNav className="mr-auto mx-5 mb-lg-0 nav-main">
               <MDBNavbarItem>
                 <MDBNavbarLink
                   onClick={() => navigat("/")}
@@ -104,18 +103,37 @@ export default function Navebar({ size }) {
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarNav>
-
             <form className="d-flex input-group w-auto">
               <input
                 onChange={(e) => setSerchTerm(e.target.value)}
-                id="serchInput"
+                id="searchInput"
                 type="search"
                 className="form-control"
-                placeholder="Serch items"
+                placeholder="Search items"
                 aria-label="Search"
                 style={{ width: "500px", borderRadius: 20 }}
               />
             </form>
+            {serchTerm && (
+              <div className="search-results">
+                {productss
+                  .filter((val) => {
+                    if (serchTerm === "") {
+                      return val;
+                    } else if (
+                      val.name.toLowerCase().includes(serchTerm.toLowerCase())
+                    ) {
+                      return val;
+                    }
+                  })
+                  .map((item) => (
+                    <div className="search-result-item" key={item.id}>
+                      <hr />
+                      <Link to={`/View/${item.id}`} className="sech-result">{item.name}</Link>
+                    </div>
+                  ))}
+              </div>
+            )}
             <MDBDropdown group className="shadow-0">
               <MDBDropdownToggle color="white">
                 <MDBIcon

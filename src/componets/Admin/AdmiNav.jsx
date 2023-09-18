@@ -36,12 +36,12 @@ export default function AdmiNav() {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='#'>
+              <MDBNavbarLink active aria-current='page' href='#' onClick={()=> nvigate('/Allproduct')}>
                 All Products
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='#'>
+              <MDBNavbarLink active aria-current='page' href='#' onClick={()=> nvigate('/Alloerders')}>
                 All Oders
               </MDBNavbarLink>
             </MDBNavbarItem>

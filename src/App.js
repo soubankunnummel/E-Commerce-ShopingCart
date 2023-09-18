@@ -29,6 +29,8 @@ import Editporaduct from "./componets/Admin/Editporaduct";
 import Addproduct from "./componets/Admin/Addproduct";
 import ViewUsers from "./componets/Admin/ViewUsers";
 import ViewMoredetail from "./componets/Admin/ViewMoredetail";
+import Allproducts from "./componets/Admin/Allproducts";
+import Alloders from "./componets/Admin/Alloders";
 
 function App() {
   const handlClick = (item) => {
@@ -90,6 +92,9 @@ function App() {
           <Route path="/Addproducts" element={<Addproduct/>}/>
           <Route path="/Users" element={<ViewUsers/>}/>
           <Route path="/More/:id" element={<ViewMoredetail/>}/>
+          <Route path="/Allproduct" element={<Allproducts/>}/>
+          <Route path="/Alloerders" element={<Alloders/>}/>
+        
 
 
         </Routes>

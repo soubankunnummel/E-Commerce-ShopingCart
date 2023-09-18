@@ -10,8 +10,8 @@ import AllProducts from "./AllProducts";
 export default function Banner() {
   const navigator = useNavigate();
   const handlShopnow = () => {
-    navigator('/All')
-  }
+    navigator("/All");
+  };
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -42,31 +42,43 @@ export default function Banner() {
             <div></div>
             <MDBCol>
               {" "}
-              <span className="categorys"onClick={()=> navigator('/LivingRoom')}>Living Room</span>
+              <span
+                className="categorys"
+                onClick={() => navigator("/LivingRoom")}
+              >
+                Living Room
+              </span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys" onClick={()=> navigator('/DinigRoom')}>Dining Room</span>
+              <span
+                className="categorys"
+                onClick={() => navigator("/DinigRoom")}
+              >
+                Dining Room
+              </span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys" onClick={()=> navigator('/Bedroom')}>Bedroom Furniture</span>
+              <span className="categorys" onClick={() => navigator("/Bedroom")}>
+                Bedroom Furniture
+              </span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys">coalm</span>
+              <span className="categorys">ktchen</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span>coalm</span>
+              <span className="categorys">Workspac</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span>coalm</span>
+              <span className="categorys">Outdoor</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span>coalm</span>
+              <span className="categorys">Bathroom</span>
             </MDBCol>
           </div>
 
@@ -121,7 +133,6 @@ export default function Banner() {
               src="https://www.ikea.com/images/storage-containers-7914dd2f2a10f52920d85a70c66e47f9.jpg?f=xs"
               className="crosel-img1 "
               alt=""
-              
             />
             <div>
               <button className="card-btn-storage">Storage containers</button>
@@ -175,19 +186,101 @@ export default function Banner() {
               <button className="card-btn">Dinnerware</button>
             </div>
           </div>
-          
         </Carousel>
       </div>
-      <div className="container mt-5">
-
-        <h1>under the carosel</h1>
-        <div className="row">
-          <div className="colash-img">
-            
-          </div>
+      <div className="container mt-5 " >
+  <div className="row">
+    <div className="col-md-4 tex-joinus">
+      <div className="text-area">
+        <h3 className="fw-bold textJoin">
+          Join us at Climate <br /> Week NYC 2023
+        </h3>
+        <div className="para">
+          <p>
+            As part of our commitment to sustainability, we’re hosting the Action
+            Speaks Summit during Climate Week NYC. Join us 9/23 for a free public
+            talk with a climate-conscious fashion designer and a live comedy show.
+            Space is limited, sign up now!
+          </p>
         </div>
       </div>
-      <AllProducts/>
+    </div> 
+    <div className="col-md-8">
+      <div className="image">
+        <img
+          src="https://www.ikea.com/images/action-speaks-new-york-climate-week-2023-ad6391e028680822eba2ef184b0e162a.jpg?f=l"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div className="container mt-5 w-75">
+  <h3 className="text-Tips">Tips and ideas for a more sustainable home</h3>
+        <Carousel responsive={responsive} className="d-flex mt-5 ">
+          <div className="card-carosel justify-content-around">
+            <img
+              src="https://www.ikea.com/images/a-persons-finger-presses-the-on-off-switch-on-the-cord-of-a--e383e0cd035aa339ba18f74cd44e27eb.jpg?f=xs"
+              className="crosel-img1 "
+              alt=""
+            />
+            <div>
+              <button className="card-btn-storage">Storage containers</button>
+            </div>
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/a-person-adds-a-vegetable-peel-to-a-brown-paper-food-waste-b-06ca675190da892b8dd449647de6cf37.jpg?f=xs"
+              className="crosel-img "
+              alt=""
+            />
+            <div>
+              <button className="card-btn-Office">Office accessories</button>
+            </div>
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/stainless-steel-vimmern-kitchen-mixer-faucet-with-handspray--ece75b7b932d57f2e1c74bf7342f6157.jpg?f=xs"
+              className="crosel-img "
+              alt=""
+            />
+            <div>
+              <button className="card-btn">Bed textails</button>
+            </div>
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/a-persons-hand-holds-a-paintbrush-and-applies-gray-paint-to--d4eb8a5dd1724409205b29c06fb08bed.jpg?f=xs"
+              className="crosel-img "
+              alt=""
+            />
+            <div>
+              <button className="card-btn">Food storage</button>
+            </div>
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/a-person-places-a-turquoise-silicone-oevermaett-food-cover-o-cf2a27520c2f51db0bf91f51ece6afbb.jpg?f=xs"
+              className="crosel-img "
+              alt=""
+            />
+            <div>
+              <button className="card-btn">Dinnerware</button>
+            </div>
+          </div>
+        </Carousel>
+      </div>
+
+
+      <AllProducts />
     </>
   );
 }

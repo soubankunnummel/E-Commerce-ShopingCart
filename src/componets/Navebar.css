@@ -7,3 +7,28 @@ nav{
     box-shadow: none;
     
 }
+.search-result-item{
+    list-style: none;
+  padding: 8px 0;
+
+    
+}
+.search-result-item a {
+    text-decoration: none; 
+    color: #333; 
+    font-weight: bold; 
+}
+.search-result-item a:hover {
+    color: #ff6600; 
+}
+.search-results{
+    border-radius: 2rem;
+    top: 6rem;
+    width: 380px;
+    background-color: white;
+    position: absolute;
+    left: 42rem;
+}
+.sech-result{
+    padding-left: 3rem;
+}  

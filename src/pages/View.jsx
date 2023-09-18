@@ -11,13 +11,14 @@ import {
   MDBRow,
   MDBCol,
 } from "mdb-react-ui-kit";
+import Navebar from "../componets/Navebar";
 
 export default function View() {
-  const { id } = useParams();
   const { productss, cart, setCart, userName } = useContext(Productcontext);
-
+  const { id } = useParams();
+  
   const navigate = useNavigate();
-
+  
   // Filter the product that matches the 'id' parameter
   const viewProduct = productss.filter(
     (product) => product.id === parseInt(id)
@@ -27,7 +28,7 @@ export default function View() {
     // Handle the product is not found
     return <h1 style={{ textAlign: "center" }}>Product not found</h1>;
   }
-
+  
   const handleAddToCart = () => {
     // Check if the product is already in the cart
     if (cart.includes(viewProduct[0])) {
@@ -37,7 +38,7 @@ export default function View() {
       setCart(() => [...cart, ...viewProduct]);
       console.log(cart);
     }
-
+    
     if (userName == "") {
       alert("Please login");
       navigate("/Login");
@@ -57,10 +58,12 @@ export default function View() {
       
     }
 
-   
+    
   };
 
   return (
+    <>
+      <Navebar size={cart.length}  />
     <div className="container mt-5">
       {viewProduct.map((item) => (
         <MDBRow key={item.id}>
@@ -94,5 +97,6 @@ export default function View() {
         </MDBRow>
       ))}
     </div>
+    </>
   );
 }

@@ -31,14 +31,7 @@ export default function AllProducts() {
           All products
         </h1>
         <MDBRow className="mt-5 my-5" id="allproducts">
-          {productss
-            .filter((val) => {
-              return serchTerm.toLowerCase() === " "
-                ? val
-                : val.name.toLowerCase().includes(serchTerm);
-              // return false; // Return false to exclude items that don't match the search term
-            })
-            .map((product, index) => (
+          {productss.map((product, index) => (
               <MDBCol md="3" key={index} style={{ marginBottom: 10 }}>
                 <MDBCard className=" hover-zoom  ">
                   <MDBCardImage

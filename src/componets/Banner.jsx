@@ -1,10 +1,10 @@
-import { MDBCarousel, MDBCarouselItem, MDBCol } from "mdb-react-ui-kit";
+import { MDBCol } from "mdb-react-ui-kit";
 import React from "react";
 import "./Banner.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useNavigate } from "react-router-dom";
-import Home from "../pages/Home";
+
 import AllProducts from "./AllProducts";
 
 export default function Banner() {
@@ -120,7 +120,8 @@ export default function Banner() {
             <img
               src="https://www.ikea.com/images/storage-containers-7914dd2f2a10f52920d85a70c66e47f9.jpg?f=xs"
               className="crosel-img1 "
-              alt="image"
+              alt=""
+              
             />
             <div>
               <button className="card-btn-storage">Storage containers</button>
@@ -132,7 +133,7 @@ export default function Banner() {
             <img
               src="https://www.ikea.com/images/office-accessories-b0adcb553d941b6db4fe076cb539f0c4.jpg?f=xs"
               className="crosel-img "
-              alt="image"
+              alt=""
             />
             <div>
               <button className="card-btn-Office">Office accessories</button>
@@ -144,7 +145,7 @@ export default function Banner() {
             <img
               src="https://www.ikea.com/images/bed-textiles-a13e46258a722094b07af8d044fdcd7a.jpg?f=xs"
               className="crosel-img "
-              alt="image"
+              alt=""
             />
             <div>
               <button className="card-btn">Bed textails</button>
@@ -156,7 +157,7 @@ export default function Banner() {
             <img
               src="https://www.ikea.com/images/cooking-accessories-f357da8a5787d63386b8b6a990867154.jpg?f=xs"
               className="crosel-img "
-              alt="image"
+              alt=""
             />
             <div>
               <button className="card-btn">Food storage</button>
@@ -168,7 +169,7 @@ export default function Banner() {
             <img
               src="https://www.ikea.com/images/food-storage-b76081f2b5d03e574c5c27ff7895f5ba.jpg?f=xs"
               className="crosel-img "
-              alt="image"
+              alt=""
             />
             <div>
               <button className="card-btn">Dinnerware</button>

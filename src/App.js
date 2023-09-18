@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Productcontext } from "./Context";
-import Navebar from "./componets/Navebar";
+
 import { Products } from "./componets/Products";
 import { BedroomProducts } from "./componets/catogerys/BedroomProdu";
 import { DinigRoom } from "./componets/catogerys/Dinigroom";
@@ -27,6 +27,8 @@ import { AdminDetails } from "./componets/Admin/AdminDetail";
 import ViewPoduct from "./componets/Admin/ViewProduct";
 import Editporaduct from "./componets/Admin/Editporaduct";
 import Addproduct from "./componets/Admin/Addproduct";
+import ViewUsers from "./componets/Admin/ViewUsers";
+import ViewMoredetail from "./componets/Admin/ViewMoredetail";
 
 function App() {
   const handlClick = (item) => {
@@ -38,6 +40,7 @@ function App() {
   const [DinigRooms,setDinigRoom] = useState(DinigRoom)
   const [LivingRooms,setLivingRooms] = useState(Livinroom)
   const [admin,setAdmin] = useState(AdminDetails)
+
 
   const [user, setUser] = useState([]); 
   const [cart, setCart] = useState([]);
@@ -85,6 +88,9 @@ function App() {
           <Route path="/ViewProduct" element={<ViewPoduct/>}/>
           <Route path="/EditProduct/:id" element={<Editporaduct/>}/>
           <Route path="/Addproducts" element={<Addproduct/>}/>
+          <Route path="/Users" element={<ViewUsers/>}/>
+          <Route path="/More/:id" element={<ViewMoredetail/>}/>
+
 
         </Routes>
         <div className="footer">

@@ -22,13 +22,12 @@ export default function ViewPoduct() {
       <div className="container">
         <div className="row mt-4">
           <div style={{ paddingLeft: "75%" }}>
-            <a onClick={()=> navigate("/Addproducts")} className="btn btn-primary">
+            <button onClick={()=> navigate("/Addproducts")}  className="btn btn-primary">
               Add Products
-            </a>
-          </div>
-          <div>
-            <a  onClick={()=> navigate('/')}>Back to home</a>
-          </div>
+            </button>
+          </div> 
+          
+          
         </div>
         <table className="table">
           <thead>
@@ -58,18 +57,18 @@ export default function ViewPoduct() {
                   />
                 </td>
                 <td>
-                  <a
+                  <button
                     className="btn btn-primary "
                     onClick={()=> handlEdit(items.id)}
                   >
                     Edit
-                  </a>
-                  <a
+                  </button>
+                  <button
                     className="btn btn-danger mt-3"
                     onClick={() => handleRemove(items.id)}
                   >
                     Delete
-                  </a>
+                  </button>
                 </td>
               </tr>
             ))}

@@ -12,7 +12,7 @@ import {
 import { Productcontext } from "../Context";
 import { useNavigate } from "react-router-dom";
 
-import Banner from "../componets/Banner";
+
 
 export default function AllProducts() {
   const navigate = useNavigate();

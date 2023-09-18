@@ -7,7 +7,7 @@ export default function EditProduct() {
     const { productss, setProductss } = useContext(Productcontext);
     const viewproduct = productss.find((item) => item.id === parseInt(id));
     const [name, setName] = useState(viewproduct.name || ''); 
-    const [type, setType] = useState(viewproduct.category || ''); 
+    const [type, setType] = useState(viewproduct.type || ''); 
     const [price, setPrice] = useState(viewproduct.price || ''); 
     const [description, setDescription] = useState(viewproduct.description || ''); 
     const [image, setImage] = useState(viewproduct.image || ''); 

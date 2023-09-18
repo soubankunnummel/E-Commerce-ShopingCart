@@ -47,9 +47,17 @@ export default function View() {
       navigate("/Cart");
     }
   };
-
+  
   const handleBuyNow = () => {
-    navigate("/Cart");
+    if (userName == "") {
+      alert("Please login");
+      navigate("/Login");
+    }else{
+      navigate("/Cart");
+      
+    }
+
+   
   };
 
   return (

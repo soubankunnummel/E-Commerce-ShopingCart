@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   MDBContainer,
   MDBNavbar,
@@ -9,14 +9,14 @@ import {
   MDBNavbarItem,
   MDBNavbarLink,
   MDBBtn,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
+import { Productcontext } from '../../Context';
+import { useNavigate } from 'react-router-dom';
 
 export default function AdmiNav() {
+  const  nvigate = useNavigate()
+    const {admin} = useContext(Productcontext)
   const [showBasic, setShowBasic] = useState(false);
 
   return (
@@ -46,7 +46,7 @@ export default function AdmiNav() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='#'>
+              <MDBNavbarLink active aria-current='page' href='#' onClick={()=> nvigate('/Users')}>
                 All Users
               </MDBNavbarLink>
             </MDBNavbarItem>
@@ -58,8 +58,13 @@ export default function AdmiNav() {
 
             
           </MDBNavbarNav>
+            {admin ? (
+                <MDBBtn className='w-25' onClick={()=> nvigate('/')}>Log out</MDBBtn>
+                
+                ):(
 
-          <MDBBtn className='w-25'>Log out</MDBBtn>
+                <MDBBtn className='w-25'  onClick={()=> nvigate('/')}>LogIn</MDBBtn>
+                )}
 
           
         </MDBCollapse>

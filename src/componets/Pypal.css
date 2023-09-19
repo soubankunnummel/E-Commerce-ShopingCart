@@ -1,0 +1,29 @@
+/* Add this CSS to your component's stylesheet */
+.mainn {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .round {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff; /* Change the background color as desired */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Add a smooth hover animation */
+  
+    /* Center the text in the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .round:hover {
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+  }
+  

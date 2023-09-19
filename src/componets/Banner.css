@@ -82,22 +82,110 @@
     color: #000;
     font-weight: 500;
     font-size: 14px;
-
+ 
 
 }
 .text-area{
    
-    margin-left: 7rem;
+    margin-left: 1rem;
 }
 .tex-joinus{
     
  background-color: rgb(245, 245, 245);
+ 
+
+ 
 }
 
 .textJoin{
     color: #000;
+    margin-top: 3rem;
 }
 .text-Tips{
     color: #000;
     margin-top: 4rem;
+}
+.more-image{
+    width: 155px;
+    margin-top: 18px;
+}
+.img-undr{
+    width: 349.74px;
+} 
+.under-div1{
+   height: 490px;
+   width: 349.74px;
+    background-color: #F4811F;
+}
+.under-div2{
+   height: 490px;
+   width: 349.74px;
+   background-color: #713c1a;
+}
+.under-div3{
+   height: 490px;
+   width: 349.74px;
+   background-color: #0077c2;
+}
+.under-text{
+    color: #000;
+    font-size: 29px;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+.under-text:hover{
+    text-decoration: underline;
+}
+
+.under-text3{
+    color: #ffffff;
+    font-size: 29px;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+.under-text3:hover{
+    text-decoration: underline;
+}
+
+
+
+.under-text1{
+    color: #000;
+    padding-left: 2rem;
+
+
+}
+.under-text2{
+    color: #ffffff;
+    padding-left: 2rem;
+
+
+}
+.text{
+    width: 285.74px;
+}
+.butnt{
+    left: 7rem;
+    position: absolute;
+    z-index: 3;
+    top: 196rem;
+    
+    
+    
+}
+.butnt2{
+    left: 31rem;
+    position: absolute;
+    z-index: 3;
+    top: 196rem;
+    
+    
+}
+.butnt3{
+    left: 54rem;
+    position: absolute;
+    z-index: 3;
+    top: 196rem;
+    
+    
 }

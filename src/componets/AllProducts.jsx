@@ -27,9 +27,7 @@ export default function AllProducts() {
   return (
     <>
       <div className="container mx-5">
-        <h1 className="mt-5 home-card" style={{ textAlign: "center" }}>
-          All products
-        </h1>
+       
         <MDBRow className="mt-5 my-5" id="allproducts">
           {productss.map((product, index) => (
               <MDBCol md="3" key={index} style={{ marginBottom: 10 }}>

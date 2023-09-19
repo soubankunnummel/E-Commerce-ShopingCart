@@ -18,16 +18,17 @@ export default function Login(props) {
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
 
-  const handlLogin = (e) => {
+  const handlLogin = (e) => { 
     e.preventDefault();
 
   
     
     const getUser = login.find((user)=> (user.email === email && user.password === password))
+    console.log(getUser);
     
 
     if(getUser){
-      setUerName( [...userName,...getUser.username])
+      setUerName(()=> [...userName,...getUser.name])
       navigat('/')
       
     }else{

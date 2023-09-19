@@ -12,7 +12,7 @@ import { Productcontext } from "../Context";
 
 export default function Register() {
   const { login,setLogin} = useContext(Productcontext);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();  
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
@@ -21,6 +21,7 @@ export default function Register() {
   
     e.preventDefault();
     setLogin((use) => (use = [...login,{name:name, email:email , password:password}]))
+    console.log(setLogin);
     alert("user Registration succesfully completed..... Plese login page")
     console.log(login);
 

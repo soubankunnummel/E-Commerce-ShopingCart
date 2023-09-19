@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Productcontext } from '../../Context';
 import { useNavigate } from 'react-router-dom';
-import { v4 as uuidv4 } from 'uuid';
+
 
 
 export default function Addproduct() {
@@ -16,7 +16,7 @@ export default function Addproduct() {
     const [image, setImage] = useState(''); 
 
     const handleSubmit = (e) => {
-        const productId = uuidv4()
+        
         setProductss((item) => (item = [...productss,{name:name, type:type ,price:price , description:description ,image:image, id:productss.length+1}]))
         console.log();
         alert("item added succes fully")

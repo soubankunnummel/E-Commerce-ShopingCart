@@ -61,7 +61,7 @@ export default function Banner() {
             <MDBCol>
               {" "}
               <span className="categorys" onClick={() => navigator("/Bedroom")}>
-                Bedroom Furniture
+                Bedroom
               </span>
             </MDBCol>
             <MDBCol>
@@ -188,44 +188,61 @@ export default function Banner() {
           </div>
         </Carousel>
       </div>
-      <div className="container mt-5 " >
-  <div className="row">
-    <div className="col-md-4 tex-joinus">
-      <div className="text-area">
-        <h3 className="fw-bold textJoin">
-          Join us at Climate <br /> Week NYC 2023
-        </h3>
-        <div className="para">
-          <p>
-            As part of our commitment to sustainability, we’re hosting the Action
-            Speaks Summit during Climate Week NYC. Join us 9/23 for a free public
-            talk with a climate-conscious fashion designer and a live comedy show.
-            Space is limited, sign up now!
-          </p>
+      <div className="container mt-5 ">
+        <div className="row">
+          <div
+            className="col-md-4 tex-joinus"
+            style={{ width: "274px", marginLeft: " 106px" }}
+          >
+            <div className="text-area">
+              <h3 className="fw-bold textJoin">
+                Join us at Climate <br /> Week NYC 2023
+              </h3>
+              <div className="para">
+                <p>
+                  As part of our commitment to sustainability, we’re hosting the
+                  Action Speaks Summit during Climate Week NYC. Join us 9/23 for
+                  a free public talk with a climate-conscious fashion designer
+                  and a live comedy show. Space is limited, sign up now!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-8">
+            <div className="image">
+              <img
+                src="https://www.ikea.com/images/action-speaks-new-york-climate-week-2023-ad6391e028680822eba2ef184b0e162a.jpg?f=l"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </div> 
-    <div className="col-md-8">
-      <div className="image">
-        <img
-          src="https://www.ikea.com/images/action-speaks-new-york-climate-week-2023-ad6391e028680822eba2ef184b0e162a.jpg?f=l"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-</div>
-<div className="container mt-5 w-75">
-  <h3 className="text-Tips">Tips and ideas for a more sustainable home</h3>
+      <div className="container mt-5 ">
+        <h3 className="text-Tips">
+          Tips and ideas for a more sustainable home
+        </h3>
         <Carousel responsive={responsive} className="d-flex mt-5 ">
-          <div className="card-carosel justify-content-around">
-            <img
-              src="https://www.ikea.com/images/a-persons-finger-presses-the-on-off-switch-on-the-cord-of-a--e383e0cd035aa339ba18f74cd44e27eb.jpg?f=xs"
-              className="crosel-img1 "
+          {/* <div className="card-carosel justify-content-around">
+          <img
+              src="https://www.ikea.com/images/a-person-adds-a-vegetable-peel-to-a-brown-paper-food-waste-b-06ca675190da892b8dd449647de6cf37.jpg?f=xs"
+              className="crosel-img "
               alt=""
             />
             <div>
-              <button className="card-btn-storage">Storage containers</button>
+              <button className="card-btn-Office">Office accessories</button>
+            </div>
+          </div> */}
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/a-persons-finger-presses-the-on-off-switch-on-the-cord-of-a--e383e0cd035aa339ba18f74cd44e27eb.jpg?f=xs"
+              className="crosel-img "
+              alt=""
+            />
+            <div>
+              <button className="card-btn-Office">Energy</button>
             </div>
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
@@ -237,7 +254,7 @@ export default function Banner() {
               alt=""
             />
             <div>
-              <button className="card-btn-Office">Office accessories</button>
+              <button className="card-btn-Office">waste</button>
             </div>
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
@@ -249,7 +266,7 @@ export default function Banner() {
               alt=""
             />
             <div>
-              <button className="card-btn">Bed textails</button>
+              <button className="card-btn">water</button>
             </div>
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
@@ -261,7 +278,7 @@ export default function Banner() {
               alt=""
             />
             <div>
-              <button className="card-btn">Food storage</button>
+              <button className="card-btn">furniture</button>
             </div>
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
@@ -273,14 +290,106 @@ export default function Banner() {
               alt=""
             />
             <div>
-              <button className="card-btn">Dinnerware</button>
+              <button className="card-btn">reusabels</button>
             </div>
           </div>
         </Carousel>
       </div>
 
-
-      <AllProducts />
+      <div className="container mt-5">
+        <div className="text-rightnow">
+          <h1 style={{ color: "black", fontSize: "20px" }} className="mb-5">
+            Right Now at RedWOOD
+          </h1>
+        </div>
+        <div className="row  ">
+          <div className="col   first-img">
+            <img
+              className="img-undr"
+              src="https://www.ikea.com/images/81/ea/81ea8a75246f35ec0493dde8b4cf826e.jpg?f=s"
+              alt=""
+            />
+            <div className="under-div1">
+              <div className="text">
+                <h1 className="under-text">New fall finds</h1>
+                <p className="under-text1">
+                  Cozy up with the limited HÖSTKVÄLL collection, especially
+                  designed to help you embrace the beauty of autumn.
+                </p>
+              </div>
+            </div>
+            <div className="butnt">
+              <button
+                style={{
+                  border: "none",
+                  borderRadius: "80px",
+                  width: "60px",
+                  height: "60px",
+                  backgroundColor: "black",
+                }}
+              >
+                <i style={{color:'white'}} class="fas fa-right-long"></i>
+              </button>
+            </div>
+          </div>
+          <div className="col">
+            <img
+              className="img-undr"
+              src="https://www.ikea.com/images/ad/5e/ad5efd0de8cc44ebae29f0659b567e1d.jpg?f=s"
+              alt=""
+            />
+            <div className="under-div2">
+              <div className="text">
+                <h1 className="under-text3">New fall finds</h1>
+                <p className="under-text2">
+                  Cozy up with the limited HÖSTKVÄLL collection, especially
+                  designed to help you embrace the beauty of autumn.
+                </p>
+              </div>
+            </div>
+            <div className="butnt2">
+              <button
+                style={{
+                  border: "none",
+                  borderRadius: "80px",
+                  width: "60px",
+                  height: "60px",
+                }}
+              >
+                <i class="fas fa-right-long"></i>
+              </button>
+            </div>
+          </div>
+          <div className="col">
+            <img
+              className="img-undr"
+              src="https://www.ikea.com/images/93/bf/93bff21bea9b96b0d74b1e662ffc0da0.jpg?f=s"
+              alt=""
+            />
+            <div className="under-div3">
+              <div className="text">
+                <h1 className="under-text3">New fall finds</h1>
+                <p className="under-text2">
+                  Cozy up with the limited HÖSTKVÄLL collection, especially
+                  designed to help you embrace the beauty of autumn.
+                </p>
+              </div>
+            </div>
+            <div className="butnt3">
+              <button
+                style={{
+                  border: "none",
+                  borderRadius: "80px",
+                  width: "60px",
+                  height: "60px",
+                }}
+              >
+                <i class="fas fa-right-long"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

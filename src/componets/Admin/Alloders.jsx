@@ -4,7 +4,7 @@ import { Productcontext } from '../../Context';
 
 
 export default function Alloders() {
-    const {productss} = useContext(Productcontext)
+    const {login} = useContext(Productcontext)
   return (
     <>
     <div className='mt-5 container'>
@@ -14,6 +14,7 @@ export default function Alloders() {
           <tr>
             <th scope='col'>Order ID</th>
             <th scope='col'>Name</th>
+            <th scope='col'>Owner</th>
             <th scope='col'>Description</th>
             <th scope='col'>Price</th>
             <th scope='col'>Type</th>
@@ -21,14 +22,15 @@ export default function Alloders() {
           </tr>
         </thead>
         <tbody>
-          {productss.map((product) => (
+          {login.map((product) => (
             <tr key={product.id}>
               <td>{product.id}</td>
-              <td>{product.name}</td>
-              <td>{product.description}</td>
-              <td>${product.price}</td>
-              <td>{product.type}</td>
-              <td>{product.quantity}</td>
+              <td>{product.product.name}</td>
+              <td>{product.username}</td>
+              <td>{product.product.description}</td>
+              <td>${product.product.price}</td>
+              <td>{product.product.type}</td>
+              <td>{product.product.quantity}</td>
             </tr>
           ))}
         </tbody>

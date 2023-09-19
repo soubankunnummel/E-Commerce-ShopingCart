@@ -29,7 +29,7 @@ export default function Navebar({ size }) {
   console.log(userName);
   const hanleLogine = () => {
     setUerName(() => []);
-    navigat("/Login");
+    navigat("/");
   };
   return (
     <>
@@ -123,13 +123,15 @@ export default function Navebar({ size }) {
                     } else if (
                       val.name.toLowerCase().includes(serchTerm.toLowerCase())
                     ) {
-                      return val;
+                      return val; 
                     }
                   })
                   .map((item) => (
                     <div className="search-result-item" key={item.id}>
                       <hr />
-                      <Link to={`/View/${item.id}`} className="sech-result">{item.name}</Link>
+                      <Link to={`/View/${item.id}`} className="sech-result">
+                        {item.name}
+                      </Link>
                     </div>
                   ))}
               </div>
@@ -151,9 +153,17 @@ export default function Navebar({ size }) {
                 <MDBDropdownItem link onClick={() => navigat("/")}>
                   Settings
                 </MDBDropdownItem>
-                <MDBDropdownItem link onClick={hanleLogine}>
-                  {userName == "" ? "Sign In " : "sign Out"}
-                </MDBDropdownItem>
+                {userName == "" ? (
+                  <MDBDropdownItem className="ms-3" onClick={() => navigat("/Login")}>
+                    Sign In{" "}
+                  </MDBDropdownItem>
+                ) : (
+                  <MDBDropdownItem link onClick={hanleLogine}>
+                    {" "}
+                    sign Out{" "}
+                  </MDBDropdownItem>
+                )}
+               
               </MDBDropdownMenu>
             </MDBDropdown>
             {userName == "" ? null : (

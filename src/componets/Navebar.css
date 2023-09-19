@@ -28,7 +28,9 @@ nav{
     background-color: white;
     position: absolute;
     left: 42rem;
+    z-index: 6;
 }
-.sech-result{
+.sech-result{ 
     padding-left: 3rem;
+
 }  

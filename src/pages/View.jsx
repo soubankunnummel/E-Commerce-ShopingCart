@@ -93,8 +93,26 @@ export default function View() {
                 </MDBBtn>
               </MDBCardBody>
             </MDBCard>
+            <div className="container exra-imges">
+              <div className="row">
+                <div className="col card mt-4"style={{height:"15rem"}}>
+                  <img className="more-image"  src={item.imge1} alt="" />
+                </div>
+                <div className="col card mt-4"style={{height:"15rem"}}>
+                  <img className="more-image"  src={item.imge2} alt="" />
+                </div>
+                <div className="col card mt-4"style={{height:"15rem"}}>
+                  <img className="more-image"  src={item.imge3} alt="" />
+                </div>
+                
+              </div>
+
+              
+            </div>
           </MDBCol>
+      
         </MDBRow>
+
       ))}
     </div>
     </>

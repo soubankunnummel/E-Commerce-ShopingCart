@@ -59,7 +59,7 @@ export default function ViewMoreDetail() {
       <hr className='my-4' />
 
       <div>
-        <h3 className='fw-bold'>Product Details</h3>
+        <h3 className='fw-bold'>Order Details</h3>
         <ul className='list-unstyled'>
           <li>
             <strong>Name:</strong> {product.name}

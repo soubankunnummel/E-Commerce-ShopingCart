@@ -31,6 +31,7 @@ import ViewUsers from "./componets/Admin/ViewUsers";
 import ViewMoredetail from "./componets/Admin/ViewMoredetail";
 import Allproducts from "./componets/Admin/Allproducts";
 import Alloders from "./componets/Admin/Alloders";
+import Paypal from "./componets/Pypal";
 
 function App() {
   const handlClick = (item) => {
@@ -94,6 +95,7 @@ function App() {
           <Route path="/More/:id" element={<ViewMoredetail/>}/>
           <Route path="/Allproduct" element={<Allproducts/>}/>
           <Route path="/Alloerders" element={<Alloders/>}/>
+          <Route path="/pypal" element={<Paypal/>}/>
         
 
 

@@ -32,9 +32,9 @@ export default function Home() {
       
       <Banner />
     {/* // ):( */}
-      <div className="container mx-5">
-        <h1 className="mt-5 home-card" style={{ textAlign: "center" }}>
-          All products
+      <div className="container mx-5 ">
+      <h1 className="mt-5 my-5 home-card ms-3" style={{  fontSize:'28px',color:'black' }}>
+           products
         </h1>
         <MDBRow className="mt-5 my-5" id="allproducts">
           {productss.map((product, index) => (

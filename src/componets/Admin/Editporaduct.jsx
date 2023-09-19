@@ -18,7 +18,7 @@ export default function EditProduct() {
         e.preventDefault();
         
         const updatedProduct = {
-            id: parseInt(id),
+            id: parseInt(id), 
             name,
             type,
             price,

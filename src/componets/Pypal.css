@@ -1,29 +1,61 @@
-/* Add this CSS to your component's stylesheet */
 .mainn {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.round {
+  width: 100px;
+  height: 100px;
+  background-color: #007bff; /* Change the background color as desired */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Add smooth transitions for transform, width, and height */
+
+  /* Center the text in the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: grow 0.7s forwards; /* Use forwards to keep the final state of the animation */
+}
+
+@keyframes grow {
+  from {
+    width: 10px;
+    height: 10px;
+    font-size: 10px; /* Start with a small font size */
   }
-  
-  .round {
+  to {
     width: 100px;
     height: 100px;
-    background-color: #007bff; /* Change the background color as desired */
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease; /* Add a smooth hover animation */
-  
-    /* Center the text in the circle */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 50px; /* Increase the font size as the circle grows */
   }
-  
-  .round:hover {
-    transform: scale(1.1); /* Add a slight scale effect on hover */
+}
+
+
+/* .round:hover {
+  transform: scale(1.1); 
+  width: 120px; 
+  height: 120px; 
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; 
+} */
+
+/* Define a keyframe animation for the circle growing from 0 size to current size */
+
+
+/* @keyframes grow {
+  0% {
+    transform: scale(0); 
+    width: 0; 
+    height: 0;
   }
-  
+  100% {
+    transform: scale(1); 
+    width: 100px; 
+    height: 100px; 
+  }
+} */

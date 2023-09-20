@@ -28,7 +28,7 @@ export default function EditProduct() {
 
         const updatedProducts = productss.map((product) =>
             product.id === updatedProduct.id ? updatedProduct : product
-        );
+        ); 
 
         setProductss(updatedProducts);
 

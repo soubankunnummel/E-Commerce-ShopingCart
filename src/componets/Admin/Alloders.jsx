@@ -1,12 +1,14 @@
 // AllOrders.js
 import React, { useContext } from 'react';
 import { Productcontext } from '../../Context';
+import AdmiNav from './AdmiNav';
 
 
 export default function Alloders() {
     const {login} = useContext(Productcontext)
   return (
     <>
+    <AdmiNav/>
     <div className='mt-5 container'>
       <h2 className='fw-bold' style={{textAlign:'center'}}>All Orders</h2>
       <table className='table'>

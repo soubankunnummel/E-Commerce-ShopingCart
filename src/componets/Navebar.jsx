@@ -123,6 +123,7 @@ export default function Navebar({ size }) {
                     } else if (
                       val.name.toLowerCase().includes(serchTerm.toLowerCase())
                     ) {
+                      
                       return val; 
                     }
                   })

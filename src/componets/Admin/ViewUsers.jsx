@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { MDBBadge, MDBTable, MDBTableHead, MDBTableBody, MDBContainer } from 'mdb-react-ui-kit';
 import { Productcontext } from '../../Context';
 import { useNavigate } from 'react-router-dom';
+import AdmiNav from './AdmiNav';
 
 export default function ViewUsers() {
     const navigate = useNavigate()
@@ -11,6 +12,8 @@ export default function ViewUsers() {
 
     }
   return (
+    <>
+    <AdmiNav/>
     <MDBContainer>
     <MDBTable align='middle' className='mt-5'>
       <MDBTableHead>
@@ -57,6 +60,7 @@ export default function ViewUsers() {
       </MDBTableBody>
     </MDBTable>
     </MDBContainer>
+    </>
   );
 }
 

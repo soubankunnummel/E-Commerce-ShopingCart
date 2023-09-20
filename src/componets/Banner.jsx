@@ -10,7 +10,7 @@ import AllProducts from "./AllProducts";
 export default function Banner() {
   const navigator = useNavigate();
   const handlShopnow = () => {
-    navigator("/All");
+    navigator("/");
   };
   const responsive = {
     superLargeDesktop: {
@@ -44,7 +44,7 @@ export default function Banner() {
               {" "}
               <span
                 className="categorys"
-                onClick={() => navigator("/LivingRoom")}
+                onClick={() => navigator("/Living")}
               >
                 Living Room
               </span>
@@ -53,32 +53,32 @@ export default function Banner() {
               {" "}
               <span
                 className="categorys"
-                onClick={() => navigator("/DinigRoom")}
+                onClick={() => navigator("/Dinig")}
               >
                 Dining Room
               </span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys" onClick={() => navigator("/Bedroom")}>
+              <span className="categorys" onClick={() => navigator("/Bed")}>
                 Bedroom
               </span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys">ktchen</span>
+              <span className="categorys" onClick={() => navigator("/kichen")}>ktchen</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys">Workspac</span>
+              <span className="categorys" onClick={() => navigator("/work")}>Workspac</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys">Outdoor</span>
+              <span className="categorys" onClick={() => navigator("/Outdor")}>Outdoor</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys">Bathroom</span>
+              <span className="categorys" onClick={() => navigator("/Bath")}>Bathroom</span>
             </MDBCol>
           </div>
 

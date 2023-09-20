@@ -32,6 +32,14 @@ import ViewMoredetail from "./componets/Admin/ViewMoredetail";
 import Allproducts from "./componets/Admin/Allproducts";
 import Alloders from "./componets/Admin/Alloders";
 import Paypal from "./componets/Pypal";
+import Kichen from "./componets/kichen";
+import Living from "./componets/Living";
+import Dining from "./componets/Dining";
+import Bed from "./componets/Bed";
+import Works from "./componets/Works";
+import Outdor from "./componets/Outdor";
+import Bathroom from "./componets/Bathroom";
+
 
 function App() {
   const handlClick = (item) => {
@@ -51,7 +59,10 @@ function App() {
   const [serchTerm, setSerchTerm] = useState("");
   const [login,setLogin] = useState(userList)
   return (
+    <>
+   
     <div className="App">
+      
       <Productcontext.Provider
         value={{
           admin,setAdmin,
@@ -89,13 +100,20 @@ function App() {
           <Route path="/View/:id" element={<View />} />
           <Route path="/AdminLogin" element={<AdminLogin />} />
           <Route path="/ViewProduct" element={<ViewPoduct/>}/>
-          <Route path="/EditProduct/:id" element={<Editporaduct/>}/>
+          <Route path="/EditProduct/:id" element={<Editporaduct/>}/> 
           <Route path="/Addproducts" element={<Addproduct/>}/>
           <Route path="/Users" element={<ViewUsers/>}/>
           <Route path="/More/:id" element={<ViewMoredetail/>}/>
           <Route path="/Allproduct" element={<Allproducts/>}/>
           <Route path="/Alloerders" element={<Alloders/>}/>
           <Route path="/pypal" element={<Paypal/>}/>
+          <Route path="/kichen" element={<Kichen/>}/>
+          <Route path="/Living" element={<Living/>}/>
+          <Route path="/Dinig" element={<Dining/>}/>
+          <Route path="/Bed" element={<Bed/>}/>
+          <Route path="/work" element={<Works/>}/>
+          <Route path="/Outdor" element={<Outdor/>}/>
+          <Route path="/Bath" element={<Bathroom/>}/>
         
 
 
@@ -105,6 +123,7 @@ function App() {
         </div>
       </Productcontext.Provider>
     </div>
+    </>
   );
 }
 

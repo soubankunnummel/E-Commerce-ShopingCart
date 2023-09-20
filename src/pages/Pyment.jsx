@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import { MDBBtn, MDBCard, MDBCardBody, MDBContainer } from "mdb-react-ui-kit";
 import Navebar from "../componets/Navebar";
 import { Productcontext } from "../Context";
+import { useNavigate } from "react-router-dom";
 
 export default function Payment() {
+  const navigate = useNavigate()
   const {cart} = useContext(Productcontext)
   return (
     <>
@@ -30,7 +32,7 @@ export default function Payment() {
           </div>
           
           <div className="text-center">
-            <MDBBtn color="primary" size="lg">
+            <MDBBtn color="primary" onClick={()=> navigate('/pypal')} size="lg">
               Proceed to Payment
             </MDBBtn>
           </div>

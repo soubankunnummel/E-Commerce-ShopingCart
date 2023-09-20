@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import { Productcontext } from "../../Context";
+import AdmiNav from "./AdmiNav";
 
 export default function Allproducts() {
   const { productss } = useContext(Productcontext);
 
   return (
+    <>
+    <AdmiNav/>
     <div className="container mt-4"> 
     <h2 >All Products</h2>
     <table className="table mt-4">
@@ -36,5 +39,6 @@ export default function Allproducts() {
       </tbody>
     </table>
     </div>
+    </>
   );
 }

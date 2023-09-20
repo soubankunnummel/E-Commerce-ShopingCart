@@ -26,7 +26,7 @@ export default function AdminLogin() {
     } else {
       alert("invalid details");
     }
-  };
+  }; 
 
   return (
     <>

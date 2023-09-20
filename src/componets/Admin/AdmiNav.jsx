@@ -22,7 +22,7 @@ export default function AdmiNav() {
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Admin Panel</MDBNavbarBrand>
+        <MDBNavbarBrand href='#' onClick={()=> nvigate('/ViewProduct')}>Admin Panel</MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'

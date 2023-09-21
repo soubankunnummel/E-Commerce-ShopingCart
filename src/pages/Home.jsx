@@ -36,9 +36,9 @@ export default function Home() {
       <h1 className="mt-5 my-5 home-card ms-3" style={{  fontSize:'28px',color:'black' }}>
            products
         </h1>
-        <MDBRow className="mt-5 my-5" id="allproducts">
+        <MDBRow className="mt-5 my-5 card-row" id="allproducts">
           {productss.map((product, index) => (
-            <MDBCol md="3" key={index} style={{ marginBottom: 10 }}>
+            <MDBCol md="3" sm={2} key={index} style={{ marginBottom: 10 }}>
               <MDBCard className=" hover-zoom  ">
                 <MDBCardImage
                   className=""

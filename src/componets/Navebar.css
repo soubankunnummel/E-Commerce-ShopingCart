@@ -7,8 +7,18 @@ nav{
     box-shadow: none;
     
 }
+.nav-main{
+    width: 1331px;
+}
+
+@media screen and (min-width: 320px) {
+    .nav-main {
+        width: 1111px;
+    }
+}
+
 .search-result-item{
-    list-style: none;
+    list-style: none; 
   padding: 8px 0;
 
     

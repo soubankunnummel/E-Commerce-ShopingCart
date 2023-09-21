@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import './Cart.css'
 import {
   MDBBtn,
   MDBCard,
@@ -52,8 +53,8 @@ export default function Cart() {
     <>
     <Navebar size={cart.length}  />
     <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
-      <MDBContainer className="h-100 py-5">
-        <MDBRow className="justify-content-center align-items-center h-100">
+      <MDBContainer className="h-100 py-5 cart-contain">
+        <MDBRow className="justify-content-center align-items-center h-100 cart-contain">
           <MDBCol>
             <MDBCard className="shopping-cart" style={{ borderRadius: "15px" }}>
               <MDBCardBody className="text-black">
@@ -86,8 +87,9 @@ export default function Cart() {
                             className="float-end text-black"
                             onClick={() => removeItem(item.id)}
                           >
-                            <MDBIcon fas icon="times" />
+                            <MDBIcon far icon="trash-alt" />
                           </a>
+                          
                           <MDBTypography tag="h5" className="text-primary">
                             {item.name}
                           </MDBTypography>

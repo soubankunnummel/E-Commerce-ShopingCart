@@ -8,7 +8,10 @@ export default function Outdor() {
     <>
     <Navebar/>
     <Bansmal/>
-     <div className="container">
+     <div className="container ">
+        <div className='bansmal'>
+
+        
         <div className="row mt-5">
             <div className="col">
               
@@ -44,6 +47,7 @@ export default function Outdor() {
 
             </div>
         </div>
+    </div>
     </div>
 
     </>

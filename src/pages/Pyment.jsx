@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { MDBBtn, MDBCard, MDBCardBody, MDBContainer } from "mdb-react-ui-kit";
 import Navebar from "../componets/Navebar";
 import { Productcontext } from "../Context";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
+import './Pyment.css'
 
 export default function Payment() {
   const navigate = useNavigate()
@@ -10,8 +11,8 @@ export default function Payment() {
   return (
     <>
     <Navebar size={cart.length}  />
-    <MDBContainer className="">
-      <MDBCard>
+    <MDBContainer className=" ">
+      <MDBCard className="pyemt-card">
         <MDBCardBody>
           <h4 className="text-center mb-4">Payment</h4>
           

@@ -1,7 +1,11 @@
-
 @media screen and (max-width:320px) {
-    .card-row{
+  
+    .cart-contain{
         width: 1000px;
+   
     }
     
+}
+.cart{
+    left: 5rem;
 }

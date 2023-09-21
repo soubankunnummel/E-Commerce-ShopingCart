@@ -11,6 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import { Productcontext } from "../Context";
 import { useNavigate } from "react-router-dom";
+import Navebar from "./Navebar";
 
 
 
@@ -26,6 +27,7 @@ export default function AllProducts() {
 
   return (
     <>
+    <Navebar/>
       <div className="container mx-5">
        
         <MDBRow className="mt-5 my-5" id="allproducts">

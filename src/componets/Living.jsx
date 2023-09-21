@@ -7,8 +7,9 @@ export default function Living() {
   return (
     <>
     <Navebar/>
-    <Bansmal/>
-     <div className="container">
+    <Bansmal/> 
+     <div className="container ">
+        <div className='bansmal'>
         <div className="row mt-5">
             <div className="col">
               
@@ -45,7 +46,7 @@ export default function Living() {
             </div>
         </div>
     </div>
-
+    </div>
 
     </>
   )

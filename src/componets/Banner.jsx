@@ -15,15 +15,15 @@ export default function Banner() {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
+      breakpoint: { max: 4000, min: 1024 },
       items: 5,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 1024, min: 800 },
       items: 4,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 800, min: 464 },
       items: 2,
     },
     mobile: {
@@ -33,13 +33,15 @@ export default function Banner() {
   };
   return (
     <>
-      <div className=" container mx-5  ">
-        <div className="row">
+      <div className=" container   ">
+        <div className="row ban-main ">
           <div
             className="d-flex align-items-start bg-light ms-5 "
             style={{ height: "10px" }}
           >
-            <div></div>
+            <div>
+              
+            </div>
             <MDBCol>
               {" "}
               <span
@@ -126,18 +128,9 @@ export default function Banner() {
           </div>
         </div>
       </div>
-      <div className="container mt-5 w-75">
-        <Carousel responsive={responsive} className="d-flex ">
-          <div className="card-carosel justify-content-around">
-            <img
-              src="https://www.ikea.com/images/storage-containers-7914dd2f2a10f52920d85a70c66e47f9.jpg?f=xs"
-              className="crosel-img1 "
-              alt=""
-            />
-            <div>
-              <button className="card-btn-storage">Storage containers</button>
-            </div>
-          </div>
+      <div className="container mt-5 w-75 ban-crosel ">
+        <Carousel responsive={responsive} className="">
+         
           <div className="card" style={{ marginLeft: "10px" }}>
             {" "}
             {/* Added marginLeft */}
@@ -146,9 +139,7 @@ export default function Banner() {
               className="crosel-img "
               alt=""
             />
-            <div>
-              <button className="card-btn-Office">Office accessories</button>
-            </div>
+           
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
             {" "}
@@ -158,9 +149,7 @@ export default function Banner() {
               className="crosel-img "
               alt=""
             />
-            <div>
-              <button className="card-btn">Bed textails</button>
-            </div>
+            
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
             {" "}
@@ -170,9 +159,7 @@ export default function Banner() {
               className="crosel-img "
               alt=""
             />
-            <div>
-              <button className="card-btn">Food storage</button>
-            </div>
+            
           </div>
           <div className="card" style={{ marginLeft: "10px" }}>
             {" "}
@@ -182,16 +169,34 @@ export default function Banner() {
               className="crosel-img "
               alt=""
             />
-            <div>
-              <button className="card-btn">Dinnerware</button>
-            </div>
+           
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/office-accessories-b0adcb553d941b6db4fe076cb539f0c4.jpg?f=xs"
+              className="crosel-img "
+              alt=""
+            />
+            
+          </div>
+          <div className="card" style={{ marginLeft: "10px" }}>
+            {" "}
+            {/* Added marginLeft */}
+            <img
+              src="https://www.ikea.com/images/office-accessories-b0adcb553d941b6db4fe076cb539f0c4.jpg?f=xs"
+              className="crosel-img "
+              alt=""
+            />
+          
           </div>
         </Carousel>
       </div>
       <div className="container mt-5 ">
-        <div className="row">
+        <div className="row text-join">
           <div
-            className="col-md-4 tex-joinus"
+            className="col tex-joinus"
             style={{ width: "274px", marginLeft: " 106px" }}
           >
             <div className="text-area">
@@ -208,7 +213,7 @@ export default function Banner() {
               </div>
             </div>
           </div>
-          <div className="col-md-8">
+          <div className="col">
             <div className="image">
               <img
                 src="https://www.ikea.com/images/action-speaks-new-york-climate-week-2023-ad6391e028680822eba2ef184b0e162a.jpg?f=l"
@@ -219,90 +224,17 @@ export default function Banner() {
         </div>
       </div>
       <div className="container mt-5 ">
-        <h3 className="text-Tips">
-          Tips and ideas for a more sustainable home
-        </h3>
-        <Carousel responsive={responsive} className="d-flex mt-5 ">
-          {/* <div className="card-carosel justify-content-around">
-          <img
-              src="https://www.ikea.com/images/a-person-adds-a-vegetable-peel-to-a-brown-paper-food-waste-b-06ca675190da892b8dd449647de6cf37.jpg?f=xs"
-              className="crosel-img "
-              alt=""
-            />
-            <div>
-              <button className="card-btn-Office">Office accessories</button>
-            </div>
-          </div> */}
-          <div className="card" style={{ marginLeft: "10px" }}>
-            {" "}
-            {/* Added marginLeft */}
-            <img
-              src="https://www.ikea.com/images/a-persons-finger-presses-the-on-off-switch-on-the-cord-of-a--e383e0cd035aa339ba18f74cd44e27eb.jpg?f=xs"
-              className="crosel-img "
-              alt=""
-            />
-            <div>
-              <button className="card-btn-Office">Energy</button>
-            </div>
-          </div>
-          <div className="card" style={{ marginLeft: "10px" }}>
-            {" "}
-            {/* Added marginLeft */}
-            <img
-              src="https://www.ikea.com/images/a-person-adds-a-vegetable-peel-to-a-brown-paper-food-waste-b-06ca675190da892b8dd449647de6cf37.jpg?f=xs"
-              className="crosel-img "
-              alt=""
-            />
-            <div>
-              <button className="card-btn-Office">waste</button>
-            </div>
-          </div>
-          <div className="card" style={{ marginLeft: "10px" }}>
-            {" "}
-            {/* Added marginLeft */}
-            <img
-              src="https://www.ikea.com/images/stainless-steel-vimmern-kitchen-mixer-faucet-with-handspray--ece75b7b932d57f2e1c74bf7342f6157.jpg?f=xs"
-              className="crosel-img "
-              alt=""
-            />
-            <div>
-              <button className="card-btn">water</button>
-            </div>
-          </div>
-          <div className="card" style={{ marginLeft: "10px" }}>
-            {" "}
-            {/* Added marginLeft */}
-            <img
-              src="https://www.ikea.com/images/a-persons-hand-holds-a-paintbrush-and-applies-gray-paint-to--d4eb8a5dd1724409205b29c06fb08bed.jpg?f=xs"
-              className="crosel-img "
-              alt=""
-            />
-            <div>
-              <button className="card-btn">furniture</button>
-            </div>
-          </div>
-          <div className="card" style={{ marginLeft: "10px" }}>
-            {" "}
-            {/* Added marginLeft */}
-            <img
-              src="https://www.ikea.com/images/a-person-places-a-turquoise-silicone-oevermaett-food-cover-o-cf2a27520c2f51db0bf91f51ece6afbb.jpg?f=xs"
-              className="crosel-img "
-              alt=""
-            />
-            <div>
-              <button className="card-btn">reusabels</button>
-            </div>
-          </div>
-        </Carousel>
+        
+        
       </div>
 
       <div className="container mt-5">
-        <div className="text-rightnow">
-          <h1 style={{ color: "black", fontSize: "20px" }} className="mb-5">
+        <div className=''>
+          <h1 style={{ color: "black", fontSize: "20px" }} className="mb-5  text-rightnow">
             Right Now at RedWOOD
           </h1>
         </div>
-        <div className="row  ">
+        <div className="row  long-img">
           <div className="col   first-img">
             <img
               className="img-undr"

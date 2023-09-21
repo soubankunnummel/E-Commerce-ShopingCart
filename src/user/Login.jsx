@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import './Login.css'
 import {
   MDBBtn,
   MDBContainer,
@@ -51,7 +52,7 @@ export default function Login(props) {
     <>
       <div className="login-main ">
         <MDBContainer>
-          <MDBRow>
+          <MDBRow className="">
             <MDBCol sm="6">
               <div className="d-flex flex-row ps-5 pt-5">
                 {/* <MDBimg  style={{ color: '#709085' }}/> */}

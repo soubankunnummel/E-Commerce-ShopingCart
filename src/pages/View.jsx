@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Productcontext } from "../Context";
+import './View.css'
 import {
   MDBCard,
   MDBCardBody,
@@ -66,7 +67,7 @@ export default function View() {
       <Navebar size={cart.length}  />
     <div className="container mt-5">
       {viewProduct.map((item) => (
-        <MDBRow key={item.id}>
+        <MDBRow key={item.id} className="view-card">
           <MDBCol md="6">
             <MDBCard>
               <MDBCardImage src={item.image} alt={viewProduct.name} />

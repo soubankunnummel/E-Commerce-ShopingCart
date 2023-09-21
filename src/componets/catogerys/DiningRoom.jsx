@@ -24,7 +24,7 @@ export default function Bedroom() {
     <>
     <Navebar size={cart.length}  />
     <div className="container mx-5">
-      <h1 className="mt-5" style={{textAlign:'center'}}>Dinigroom</h1>
+    <h3 className="mt-5" style={{ marginLeft: "10px", color: "black" }}>DinigRoom</h3>
       <MDBRow className="mt-5" id="allproducts">
         {DinigRooms.filter((val) => {
           return serchTerm.toLowerCase() === " "

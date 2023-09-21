@@ -35,7 +35,7 @@ export default function Navebar({ size }) {
     <>
       <MDBNavbar
         expand="lg"
-        className="main"
+        className="nav-main"
         style={{ boxShadow: "none" }}
         light
         bgColor=""
@@ -81,7 +81,7 @@ export default function Navebar({ size }) {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink onClick={() => navigat("/")} href="">
+                <MDBNavbarLink onClick={() => navigat("/All")} href="">
                   Procuts
                 </MDBNavbarLink>
               </MDBNavbarItem>
@@ -132,7 +132,7 @@ export default function Navebar({ size }) {
                       <hr />
                       <Link to={`/View/${item.id}`} className="sech-result">
                         {item.name}
-                      </Link>
+                      </Link> 
                     </div>
                   ))}
               </div>

@@ -13,7 +13,8 @@ export default function Paypal() {
         {/* You can style this circle using CSS */}
       </div>
       <h3>Pyment successfully</h3>
-      <a className="mt-5" onClick={()=> navigete('/')}>Back to shopping</a>
+      <button className="mt-5" style={{border:'none'}} onClick={() => navigete('/')}>Back to shopping</button>
+
     </div>
     
       </>

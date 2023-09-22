@@ -47,7 +47,7 @@ export default function Navebar({ size }) {
                 onClick={() => navigat("/")}
                 src={require("../images/RedWood logo black.png")}
                 style={{ width: 50 }}
-                alt="image"
+                alt=""
               />
 
               <img

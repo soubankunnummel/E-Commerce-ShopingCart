@@ -76,7 +76,6 @@ function App() {
           productss,setProductss,
           
           cart,
-          setCart,
           user,
           setUser,
           userName,

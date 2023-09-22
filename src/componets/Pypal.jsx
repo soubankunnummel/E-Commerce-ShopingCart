@@ -1,6 +1,6 @@
 import React from "react";
 import "./Pypal.css";
-import { MDBBtn } from "mdb-react-ui-kit";
+
 import { useNavigate } from "react-router-dom";
 
 export default function Paypal() {

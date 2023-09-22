@@ -82,13 +82,13 @@ export default function Navebar({ size }) {
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink onClick={() => navigat("/All")} href="">
-                  Procuts
+                  Products
                 </MDBNavbarLink>
               </MDBNavbarItem>
 
               <MDBDropdown>
                 <MDBDropdownToggle tag="a" className="nav-link" role="button">
-                  Catogerys
+                  Categories
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem onClick={() => navigat("/LivingRoom")} link>
@@ -114,29 +114,33 @@ export default function Navebar({ size }) {
                 style={{ width: "500px", borderRadius: 20 }}
               />
             </form>
-            {serchTerm && (
-              <div className="search-results">
-                {productss
-                  .filter((val) => {
-                    if (serchTerm === "") {
-                      return val;
-                    } else if (
-                      val.name.toLowerCase().includes(serchTerm.toLowerCase())
-                    ) {
-                      
-                      return val; 
-                    }
-                  })
-                  .map((item) => (
-                    <div className="search-result-item" key={item.id}>
-                      <hr />
-                      <Link to={`/View/${item.id}`} className="sech-result">
-                        {item.name}
-                      </Link> 
-                    </div>
-                  ))}
-              </div>
-            )}
+            {serchTerm ? (
+  <>
+    <div className="search-results">
+      {productss
+        .filter((val) => {
+          if (serchTerm === "") {
+            return val;
+          } else if (
+            val.name.toLowerCase().includes(serchTerm.toLowerCase())
+          ) {
+            return val;
+          }
+        })
+        .map((item) => (
+          <div className="search-result-item" key={item.id}>
+            <hr />
+            <p onClick={() => {
+              navigat(`/View/${item.id}`);
+              
+            }} className="sech-result">
+              {item.name}
+            </p>
+          </div>
+        ))}
+    </div>
+  </>
+) : ""}
             <MDBDropdown group className="shadow-0">
               <MDBDropdownToggle color="white">
                 <MDBIcon

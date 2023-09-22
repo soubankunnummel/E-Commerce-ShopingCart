@@ -14,10 +14,11 @@ export default function Addproduct() {
     const [price, setPrice] = useState( ''); 
     const [description, setDescription] = useState( ''); 
     const [image, setImage] = useState(''); 
+    const [quantity] = useState(1)
 
     const handleSubmit = (e) => {
         
-        setProductss((item) => (item = [...productss,{name:name, type:type ,price:price , description:description ,image:image, id:productss.length+1}]))
+        setProductss((item) => (item = [...productss,{name:name, type:type ,price:price , description:description ,image:image, id:productss.length+1,quantity:parseInt(quantity)}]))
         console.log();
         alert("item added succes fully")
         navigate('/ViewProduct')

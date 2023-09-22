@@ -41,11 +41,11 @@ export default function Bansmal() {
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys" onClick={() => navigator("/kichen")}>ktchen</span>
+              <span className="categorys" onClick={() => navigator("/kichen")}>kitchen</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys" onClick={() => navigator("/work")}>Workspac</span>
+              <span className="categorys" onClick={() => navigator("/work")}>Workspace</span>
             </MDBCol>
             <MDBCol>
               {" "}

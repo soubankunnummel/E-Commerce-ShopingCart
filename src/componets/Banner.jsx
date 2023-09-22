@@ -5,7 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useNavigate } from "react-router-dom";
 
-import AllProducts from "./AllProducts";
+
 
 export default function Banner() {
   const navigator = useNavigate();
@@ -68,11 +68,11 @@ export default function Banner() {
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys" onClick={() => navigator("/kichen")}>ktchen</span>
+              <span className="categorys" onClick={() => navigator("/kichen")}>kitchen</span>
             </MDBCol>
             <MDBCol>
               {" "}
-              <span className="categorys" onClick={() => navigator("/work")}>Workspac</span>
+              <span className="categorys" onClick={() => navigator("/work")}>Workspace</span>
             </MDBCol>
             <MDBCol>
               {" "}

@@ -33,7 +33,7 @@ export default function Payment() {
           </div>
           
           <div className="text-center">
-            <MDBBtn color="primary" onClick={()=> navigate('/pypal')} size="lg">
+            <MDBBtn color="primary" size="lg">
               Proceed to Payment
             </MDBBtn>
           </div>

@@ -158,7 +158,7 @@ export default function Navebar({ size }) {
                 <MDBDropdownItem link onClick={() => navigat("/")}>
                   Settings
                 </MDBDropdownItem>
-                {userName == "" ? (
+                {userName === "" ? (
                   <MDBDropdownItem className="ms-3" onClick={() => navigat("/Login")}>
                     Sign In{" "}
                   </MDBDropdownItem>
@@ -171,7 +171,7 @@ export default function Navebar({ size }) {
                
               </MDBDropdownMenu>
             </MDBDropdown>
-            {userName == "" ? null : (
+            {userName === "" ? null : (
               <>
                 <Link to={"/Cart"}>
                   <MDBIcon

@@ -47,9 +47,9 @@ function App() {
   };
   const [itemCount, setItemCount] = useState([]);
   const [productss,setProductss] = useState(Products)
-  const [BedroomProductss,setBedroomProductss] = useState(BedroomProducts)
-  const [DinigRooms,setDinigRoom] = useState(DinigRoom)
-  const [LivingRooms,setLivingRooms] = useState(Livinroom)
+  const [BedroomProductss] = useState(BedroomProducts)
+  const [DinigRooms] = useState(DinigRoom)
+  const [LivingRooms] = useState(Livinroom)
   const [admin,setAdmin] = useState(AdminDetails)
 
 

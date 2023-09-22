@@ -23,7 +23,7 @@ export default function Home() {
     navigate(`/View/${productId}`);
   };
 
-  const { productss, serchTerm ,cart} = useContext(Productcontext);
+  const { productss ,cart} = useContext(Productcontext);
 
   return (
     <>

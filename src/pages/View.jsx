@@ -40,7 +40,7 @@ export default function View() {
       console.log(cart);
     }
     
-    if (userName == "") {
+    if (userName === "") {
       alert("Please login");
       navigate("/Login");
     } else {
@@ -51,7 +51,7 @@ export default function View() {
   };
   
   const handleBuyNow = () => {
-    if (userName == "") {
+    if (userName === "") {
       alert("Please login");
       navigate("/Login");
     }else{

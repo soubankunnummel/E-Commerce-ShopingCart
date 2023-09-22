@@ -126,6 +126,7 @@ export default function Navebar({ size }) {
           ) {
             return val;
           }
+          return 
         })
         .map((item) => (
           <div className="search-result-item" key={item.id}>

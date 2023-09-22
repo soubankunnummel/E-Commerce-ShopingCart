@@ -117,28 +117,29 @@ export default function Navebar({ size }) {
             {serchTerm ? (
   <>
     <div className="search-results">
-      {productss
-        .filter((val) => {
-          if (serchTerm === "") {
-            return val;
-          } else if (
-            val.name.toLowerCase().includes(serchTerm.toLowerCase())
-          ) {
-            return val;
-          }
-          return 
-        })
-        .map((item) => (
-          <div className="search-result-item" key={item.id}>
-            <hr />
-            <p onClick={() => {
-              navigat(`/View/${item.id}`);
-              
-            }} className="sech-result">
-              {item.name}
-            </p>
-          </div>
-        ))}
+    {productss
+  .filter((val) => {
+    if (serchTerm === "") {
+      return true; // Include all items when the search term is empty
+    } else if (val.name.toLowerCase().includes(serchTerm.toLowerCase())) {
+      return true; // Include items that match the search term
+    }
+    return false; // Exclude items that don't match the search term
+  })
+  .map((item) => (
+    <div className="search-result-item" key={item.id}>
+      <hr />
+      <p
+        onClick={() => {
+          navigat(`/View/${item.id}`);
+          setSerchTerm("")
+        }}
+        className="sech-result"
+      >
+        {item.name}
+      </p>
+    </div>
+  ))}
     </div>
   </>
 ) : ""}

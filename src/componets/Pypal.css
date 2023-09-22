@@ -11,7 +11,7 @@
   background-color: #007bff; /* Change the background color as desired */
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Add smooth transitions for transform, width, and height */
+  transition: transform 0.3s, width 0.3s, height 0.3s; /* Add smooth transitions for transform, width, and height */
 
   /* Center the text in the circle */
   display: flex;
